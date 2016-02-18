@@ -1,0 +1,32 @@
+Shapes 
+=========
+-add a new shape
+-add adjust?
+-and add move?
+
+-add transparency button?  
+-add opacity button? 
+
+-make it so the SAVE and LOAD add the new buttons, add the number to the shapes calss
+
+-VISIT DRAW METHOD OF ALL CHILD CLASSES (CIRCLE, TRIANGLE, RECTANGLE) 
+ STAR SHAPE
+
+Babbler 
+==========
+-how many times does "victoria" follow the word queen 
+
+-whenever you see "queen" output george and then randomly continue
+
+Ultimate Tic Tac Toe
+===================
+-restart button 
+-display of user name
+-undo last move
+-save and load game
+
+MISC.
+====================
+read in a list of strings in a file and manipulate them with the STL
+roll 1m sided die 1k times and display which number displayed the most (VECOTR MAP LIST)
+

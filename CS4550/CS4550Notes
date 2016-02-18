@@ -1,0 +1,23 @@
+a^nb^n
+aaabbb
+s-> asb | ab
+s-> asb -> aabb
+s-> asb -> asb -> aaabbb
+
+finite automata
+push-down automata
+Turing Machine
+
+
+A -> a
+A -> aB
+S -> all
+
+context sensative grammars = anything -> anything
+Ab -> Xay
+
+
+
+SCANNER NOTES
+===============
+mLEGALMOVES[mINTEGERs][LETTER] = mPERGATORY

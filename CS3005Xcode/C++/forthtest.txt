@@ -1,0 +1,36 @@
+rot
+100 *
+-rot
+
+rot
+100 *
+rot
+10 *
+swap
+-1 *
++ + -1 *
+
+rot
+100 *
+rot
+10 * + + 
+
+isgoal pack dup 200 = if ." correct "
+
+isvalid arithmatic
+1 -1	-1   -
+	-2   -
+	 -  -1
+	 -  -2
+	-1  -1
+
+0 + 1	+1   -
+	+2   -
+ 	 -  +1
+	 -  +2
+	+1  +1
+
+if NEAR do near arithmatic
+else do FAR
+check for repeats and invalid operations	
+		

@@ -1,0 +1,402 @@
+mysql> source jhaberleSecurity.sql;
+--------------
+OP DATABASE IF EXISTS RedFlameCompany
+--------------
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OP DATABASE IF EXISTS RedFlameCompany' at line 1
+--------------
+CREATE DATABASE RedFlameCompany
+--------------
+
+ERROR 1007 (HY000): Can't create database 'RedFlameCompany'; database exists
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+--------------
+DROP TABLE IF EXISTS payroll
+--------------
+
+Query OK, 0 rows affected (0.24 sec)
+
+--------------
+CREATE TABLE payroll (
+ Dept int(3),
+ Manager boolean,
+ Name varchar(30),
+ Birthdate date,
+ Salary int(7)
+)
+--------------
+
+Query OK, 0 rows affected (0.05 sec)
+
+--------------
+INSERT into payroll (Dept, Manager, Name, Birthdate, Salary) VALUES
+ (1, true, "BOB", "01-01-81", 50000),
+ (1, false, "BILL", "02-02-82", 40000),
+ (1, false, "BART", "03-03-83", 70000),
+ (2, true, "JIM", "04-04-84", 40000),
+ (2, false, "JANET", "05-05-85", 50000),
+ (2, false, "JACK", "06-06-86", 60000),
+ (3, true, "MARY", "07-07-87", 50000),
+ (3, false, "MARTHA", "08-08-88", 70000),
+ (3, false, "MARTY", "09-09-89", 90000)
+--------------
+
+Query OK, 9 rows affected, 9 warnings (0.00 sec)
+Records: 9  Duplicates: 0  Warnings: 9
+
+--------------
+CREATE VIEW dept1 AS 
+ SELECT 
+  Dept,
+  Manager,
+  Name,
+  Birthdate,
+  Salary
+ FROM
+  payroll
+ WHERE
+  dept = 1
+--------------
+
+ERROR 1050 (42S01): Table 'dept1' already exists
+--------------
+CREATE VIEW dept2 AS 
+ SELECT 
+  Dept,
+  Manager,
+  Name,
+  Birthdate,
+  Salary
+ FROM
+  payroll
+ WHERE
+  dept = 2
+--------------
+
+ERROR 1050 (42S01): Table 'dept2' already exists
+--------------
+CREATE VIEW dept3 AS 
+ SELECT 
+  Dept,
+  Manager,
+  Name,
+  Birthdate,
+  Salary
+ FROM
+  payroll
+ WHERE
+  dept = 3
+--------------
+
+ERROR 1050 (42S01): Table 'dept3' already exists
+--------------
+CREATE VIEW birthday AS 
+ SELECT 
+  Dept,
+  Manager,
+  Name,
+  Birthdate
+ FROM
+  payroll
+--------------
+
+ERROR 1050 (42S01): Table 'birthday' already exists
+--------------
+DROP user Bob
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+DROP user Bill
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+DROP user Bart
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+DROP user Jim
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+DROP user Janet
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+DROP user Jack
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+DROP user Mary
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+DROP user Martha
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+DROP user Marty
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+CREATE user Bob identified by 'password'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+CREATE user Bill identified by 'password'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+CREATE user Bart identified by 'password'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+CREATE user Jim identified by 'password'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+CREATE user Janet identified by 'password'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+CREATE user Jack identified by 'password'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+CREATE user Mary identified by 'password'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+CREATE user Martha identified by 'password'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+CREATE user Marty identified by 'password'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+GRANT SELECT on RedFlameCompany.dept1 to Bob
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+GRANT UPDATE(Dept,Manager,Name,Birthdate) on RedFlameCompany.dept1 to Bob
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+GRANT SELECT(Dept,Manager,Name,Birthdate) on RedFlameCompany.dept1 to Bill
+--------------
+
+Query OK, 0 rows affected (0.01 sec)
+
+--------------
+GRANT SELECT(Dept,Manager,Name,Birthdate) on RedFlameCompany.dept1 to Bart
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+GRANT SELECT on RedFlameCompany.dept1 to Jim
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+GRANT UPDATE(Dept,Manager,Name,Birthdate) on RedFlameCompany.dept2 to Jim
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+GRANT SELECT(Dept,Manager,Name,Birthdate) on RedFlameCompany.dept2 to Janet
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+GRANT SELECT(Dept,Manager,Name,Birthdate) on RedFlameCompany.dept2 to Jack
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+GRANT SELECT(Dept,Manager,Name,Birthdate) on RedFlameCompany.dept3 to Martha
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+GRANT SELECT(Dept,Manager,Name,Birthdate) on RedFlameCompany.dept3 to Marty
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+GRANT SELECT on RedFlameCompany.birthday to Marty
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+GRANT UPDATE(Birthdate) on RedFlameCompany.birthday to Marty
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+GRANT ALL PRIVILEGES ON *.* to Mary
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+SHOW GRANTS For 'Bob'
+--------------
+
++----------------------------------------------------------------------------------------------------+
+| Grants for Bob@%                                                                                   |
++----------------------------------------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO 'Bob'@'%' IDENTIFIED BY PASSWORD '*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19' |
+| GRANT SELECT, UPDATE (Birthdate, Dept, Name, Manager) ON `RedFlameCompany`.`dept1` TO 'Bob'@'%'    |
++----------------------------------------------------------------------------------------------------+
+2 rows in set (0.00 sec)
+
+--------------
+SHOW GRANTS For 'Bill'
+--------------
+
++-----------------------------------------------------------------------------------------------------+
+| Grants for Bill@%                                                                                   |
++-----------------------------------------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO 'Bill'@'%' IDENTIFIED BY PASSWORD '*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19' |
+| GRANT SELECT (Birthdate, Dept, Name, Manager) ON `RedFlameCompany`.`dept1` TO 'Bill'@'%'            |
++-----------------------------------------------------------------------------------------------------+
+2 rows in set (0.00 sec)
+
+--------------
+SHOW GRANTS For 'Bart'
+--------------
+
++-----------------------------------------------------------------------------------------------------+
+| Grants for Bart@%                                                                                   |
++-----------------------------------------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO 'Bart'@'%' IDENTIFIED BY PASSWORD '*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19' |
+| GRANT SELECT (Birthdate, Dept, Name, Manager) ON `RedFlameCompany`.`dept1` TO 'Bart'@'%'            |
++-----------------------------------------------------------------------------------------------------+
+2 rows in set (0.00 sec)
+
+--------------
+SHOW GRANTS For 'Jim'
+--------------
+
++----------------------------------------------------------------------------------------------------+
+| Grants for Jim@%                                                                                   |
++----------------------------------------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO 'Jim'@'%' IDENTIFIED BY PASSWORD '*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19' |
+| GRANT UPDATE (Birthdate, Dept, Name, Manager) ON `RedFlameCompany`.`dept2` TO 'Jim'@'%'            |
+| GRANT SELECT ON `RedFlameCompany`.`dept1` TO 'Jim'@'%'                                             |
++----------------------------------------------------------------------------------------------------+
+3 rows in set (0.00 sec)
+
+--------------
+SHOW GRANTS For 'Janet'
+--------------
+
++------------------------------------------------------------------------------------------------------+
+| Grants for Janet@%                                                                                   |
++------------------------------------------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO 'Janet'@'%' IDENTIFIED BY PASSWORD '*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19' |
+| GRANT SELECT (Birthdate, Dept, Name, Manager) ON `RedFlameCompany`.`dept2` TO 'Janet'@'%'            |
++------------------------------------------------------------------------------------------------------+
+2 rows in set (0.00 sec)
+
+--------------
+SHOW GRANTS For 'Jack'
+--------------
+
++-----------------------------------------------------------------------------------------------------+
+| Grants for Jack@%                                                                                   |
++-----------------------------------------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO 'Jack'@'%' IDENTIFIED BY PASSWORD '*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19' |
+| GRANT SELECT (Birthdate, Dept, Name, Manager) ON `RedFlameCompany`.`dept2` TO 'Jack'@'%'            |
++-----------------------------------------------------------------------------------------------------+
+2 rows in set (0.00 sec)
+
+--------------
+SHOW GRANTS For 'Mary'
+--------------
+
++--------------------------------------------------------------------------------------------------------------+
+| Grants for Mary@%                                                                                            |
++--------------------------------------------------------------------------------------------------------------+
+| GRANT ALL PRIVILEGES ON *.* TO 'Mary'@'%' IDENTIFIED BY PASSWORD '*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19' |
++--------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+--------------
+SHOW GRANTS For 'Martha'
+--------------
+
++-------------------------------------------------------------------------------------------------------+
+| Grants for Martha@%                                                                                   |
++-------------------------------------------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO 'Martha'@'%' IDENTIFIED BY PASSWORD '*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19' |
+| GRANT SELECT (Birthdate, Dept, Name, Manager) ON `RedFlameCompany`.`dept3` TO 'Martha'@'%'            |
++-------------------------------------------------------------------------------------------------------+
+2 rows in set (0.00 sec)
+
+--------------
+SHOW GRANTS For 'Marty'
+--------------
+
++------------------------------------------------------------------------------------------------------+
+| Grants for Marty@%                                                                                   |
++------------------------------------------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO 'Marty'@'%' IDENTIFIED BY PASSWORD '*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19' |
+| GRANT SELECT (Birthdate, Dept, Name, Manager) ON `RedFlameCompany`.`dept3` TO 'Marty'@'%'            |
+| GRANT SELECT, UPDATE (Birthdate) ON `RedFlameCompany`.`birthday` TO 'Marty'@'%'                      |
++------------------------------------------------------------------------------------------------------+
+3 rows in set (0.00 sec)
+
+mysql> exit

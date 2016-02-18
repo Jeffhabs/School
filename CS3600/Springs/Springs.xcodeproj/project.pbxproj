@@ -1,0 +1,277 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		385AEB6C1C5A7839005E01BE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385AEB6B1C5A7839005E01BE /* OpenGL.framework */; };
+		385AEB6E1C5A7841005E01BE /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385AEB6D1C5A7841005E01BE /* GLUT.framework */; };
+		3872FE111C6BF80700B21491 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3872FE0F1C6BF80700B21491 /* Vector.cpp */; };
+		3872FE141C6C033C00B21491 /* particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3872FE131C6C033C00B21491 /* particle.cpp */; };
+		3872FE171C6C039100B21491 /* forces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3872FE161C6C039100B21491 /* forces.cpp */; };
+		3872FE1B1C6C040D00B21491 /* graphics_springs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3872FE191C6C040D00B21491 /* graphics_springs.cpp */; };
+		3872FE1D1C6C044600B21491 /* collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3872FE1C1C6C044600B21491 /* collision.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		385AEB5F1C5A781D005E01BE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		385AEB611C5A781D005E01BE /* Springs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Springs; sourceTree = BUILT_PRODUCTS_DIR; };
+		385AEB6B1C5A7839005E01BE /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		385AEB6D1C5A7841005E01BE /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		3872FE0E1C6BF3DE00B21491 /* Vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		3872FE0F1C6BF80700B21491 /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
+		3872FE121C6C02DF00B21491 /* particle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = particle.h; sourceTree = "<group>"; };
+		3872FE131C6C033C00B21491 /* particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle.cpp; sourceTree = "<group>"; };
+		3872FE151C6C034E00B21491 /* forces.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = forces.h; sourceTree = "<group>"; };
+		3872FE161C6C039100B21491 /* forces.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = forces.cpp; sourceTree = "<group>"; };
+		3872FE181C6C03CC00B21491 /* graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = graphics.h; sourceTree = "<group>"; };
+		3872FE191C6C040D00B21491 /* graphics_springs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = graphics_springs.cpp; sourceTree = "<group>"; };
+		3872FE1C1C6C044600B21491 /* collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = collision.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		385AEB5E1C5A781D005E01BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				385AEB6E1C5A7841005E01BE /* GLUT.framework in Frameworks */,
+				385AEB6C1C5A7839005E01BE /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		385AEB581C5A781D005E01BE = {
+			isa = PBXGroup;
+			children = (
+				385AEB631C5A781D005E01BE /* Springs */,
+				385AEB621C5A781D005E01BE /* Products */,
+				385AEB6D1C5A7841005E01BE /* GLUT.framework */,
+				385AEB6B1C5A7839005E01BE /* OpenGL.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		385AEB621C5A781D005E01BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				385AEB611C5A781D005E01BE /* Springs */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		385AEB631C5A781D005E01BE /* Springs */ = {
+			isa = PBXGroup;
+			children = (
+				3872FE0E1C6BF3DE00B21491 /* Vector.h */,
+				3872FE0F1C6BF80700B21491 /* Vector.cpp */,
+				3872FE121C6C02DF00B21491 /* particle.h */,
+				3872FE131C6C033C00B21491 /* particle.cpp */,
+				3872FE151C6C034E00B21491 /* forces.h */,
+				3872FE161C6C039100B21491 /* forces.cpp */,
+				3872FE181C6C03CC00B21491 /* graphics.h */,
+				3872FE191C6C040D00B21491 /* graphics_springs.cpp */,
+				3872FE1C1C6C044600B21491 /* collision.cpp */,
+			);
+			path = Springs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		385AEB601C5A781D005E01BE /* Springs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 385AEB681C5A781D005E01BE /* Build configuration list for PBXNativeTarget "Springs" */;
+			buildPhases = (
+				385AEB5D1C5A781D005E01BE /* Sources */,
+				385AEB5E1C5A781D005E01BE /* Frameworks */,
+				385AEB5F1C5A781D005E01BE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Springs;
+			productName = Springs;
+			productReference = 385AEB611C5A781D005E01BE /* Springs */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		385AEB591C5A781D005E01BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = CS3005;
+				TargetAttributes = {
+					385AEB601C5A781D005E01BE = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 385AEB5C1C5A781D005E01BE /* Build configuration list for PBXProject "Springs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 385AEB581C5A781D005E01BE;
+			productRefGroup = 385AEB621C5A781D005E01BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				385AEB601C5A781D005E01BE /* Springs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		385AEB5D1C5A781D005E01BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3872FE1D1C6C044600B21491 /* collision.cpp in Sources */,
+				3872FE111C6BF80700B21491 /* Vector.cpp in Sources */,
+				3872FE1B1C6C040D00B21491 /* graphics_springs.cpp in Sources */,
+				3872FE171C6C039100B21491 /* forces.cpp in Sources */,
+				3872FE141C6C033C00B21491 /* particle.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		385AEB661C5A781D005E01BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		385AEB671C5A781D005E01BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		385AEB691C5A781D005E01BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		385AEB6A1C5A781D005E01BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		385AEB5C1C5A781D005E01BE /* Build configuration list for PBXProject "Springs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				385AEB661C5A781D005E01BE /* Debug */,
+				385AEB671C5A781D005E01BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		385AEB681C5A781D005E01BE /* Build configuration list for PBXNativeTarget "Springs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				385AEB691C5A781D005E01BE /* Debug */,
+				385AEB6A1C5A781D005E01BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 385AEB591C5A781D005E01BE /* Project object */;
+}

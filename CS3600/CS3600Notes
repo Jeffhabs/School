@@ -1,0 +1,82 @@
+//put in circle.h
+const double GRAVITY = 
+const double AIR_FRICTION = .9999;
+
+double DT = oi;
+void display()
+{
+  //acceleration
+  //gravity adds to each circle's (m)emberDy + (G)lobal -32ft per second. play with Global until it makes sense
+  
+  //friction (air)
+     mDy *= .9999 //make it as close to 1 
+     mDx *= .9999
+  
+  //collisions - keep ball/wall
+  //ball/ball  - 
+    for(unsigned int i = 0; i < gAllCircles.size(); i++)
+    {
+       gAllCircles[i].HandleBallCollisions(gAllCircles, i)
+    }
+
+
+
+
+
+
+
+  //Draw each circle
+   gAllCircles.at.index[i].draw
+
+
+make prototype graphics1.h
+     extern double screen_x;
+     void DrawCircle(double x, double y, double radius);
+
+in your circle.cpp
+#include "Circle.h"
+#include "graphics1.h"
+
+(you almost always want to pass vector objects by reference & you don't want to be making copies of vector objects)
+void Circle::HandleBallCollisions(std::vector<Circle>& gAllCircles, int i )
+{
+  double x1 = gAllCircles[i].GetX() + gAllCircles[i].GetDx()*DT;//(DeltaTime)
+  double y1 = gAllCirlces[i].GetY() + gAllCircles[i].GetDy()*DT:
+  double r1 = 
+  for(unsigned int j = i + 1; j < gAllCircles.size(); j++)
+  {
+    double x2 = gAllCircles[i].GetX() + gAllCircles[i].GetDx()*DT;
+    double y2 =
+    double r2 =   
+    
+    double xDistance = x2-x1; //leg1
+    double yDistance = y2-y1; //leg2
+
+    double h = sqrt(xDistance*xDistance + yDistance * ydistance);
+
+    if(h < (r1 + r2)
+    {
+      collide(i, j, gAllCircles&) 
+
+
+February 2, 2016
+==================================================================
+Sierpinskis Gasket - randomly select 2 vertices and half it to draw another triangle. x = (x + X[r])/2;
+	  y = (y + Y[r])/2; 
+
+
+Affine Math
+-Points
+-Vectors = direction +1 to the right +2 upward
+-Scalars = single number you can multiply by
+adding of points is not allowed in affine math
+scalar * point is also not allowed
+subtracting 2 points is allowed. A - B = vector from b to a (destination subtract the source)
+
+|v| length of vector V (2,1) = sqrt of 2^2 + 1^1
+v.normalize() making it exactly 1
+
+dot product (u,v) = cos(theta) in scalar 
+if (u,v) is normalized -- (inverse) acos(dot(u,v)) = angle
+crossproduct (u,v)= vector
+v x u =(y1*z2 - z1*y2, -(x1*z2-x2*z1),x1*y2-y2*y1)

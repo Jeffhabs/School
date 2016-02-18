@@ -1,0 +1,272 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38DE044A1C099E170062B314 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38DE04491C099E170062B314 /* main.cpp */; };
+		38DE04521C099F6C0062B314 /* Token.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38DE04501C099F6C0062B314 /* Token.cpp */; };
+		38DE04551C099F750062B314 /* Shingle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38DE04531C099F750062B314 /* Shingle.cpp */; };
+		38DE04581C099F810062B314 /* Babbler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38DE04561C099F810062B314 /* Babbler.cpp */; };
+		38DE045B1C099F9B0062B314 /* File.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38DE04591C099F9B0062B314 /* File.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		38DE04441C099E170062B314 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		38DE04461C099E170062B314 /* Babble */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Babble; sourceTree = BUILT_PRODUCTS_DIR; };
+		38DE04491C099E170062B314 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		38DE04501C099F6C0062B314 /* Token.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Token.cpp; sourceTree = "<group>"; };
+		38DE04511C099F6C0062B314 /* Token.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Token.hpp; sourceTree = "<group>"; };
+		38DE04531C099F750062B314 /* Shingle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shingle.cpp; sourceTree = "<group>"; };
+		38DE04541C099F750062B314 /* Shingle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shingle.hpp; sourceTree = "<group>"; };
+		38DE04561C099F810062B314 /* Babbler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Babbler.cpp; sourceTree = "<group>"; };
+		38DE04571C099F810062B314 /* Babbler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Babbler.hpp; sourceTree = "<group>"; };
+		38DE04591C099F9B0062B314 /* File.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = File.cpp; sourceTree = "<group>"; };
+		38DE045A1C099F9B0062B314 /* File.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = File.hpp; sourceTree = "<group>"; };
+		38DE045C1C09BE9F0062B314 /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
+		38DE045D1C09BEA60062B314 /* output.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = output.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38DE04431C099E170062B314 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38DE043D1C099E170062B314 = {
+			isa = PBXGroup;
+			children = (
+				38DE04481C099E170062B314 /* Babble */,
+				38DE04471C099E170062B314 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38DE04471C099E170062B314 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38DE04461C099E170062B314 /* Babble */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38DE04481C099E170062B314 /* Babble */ = {
+			isa = PBXGroup;
+			children = (
+				38DE045D1C09BEA60062B314 /* output.txt */,
+				38DE045C1C09BE9F0062B314 /* input.txt */,
+				38DE04491C099E170062B314 /* main.cpp */,
+				38DE04501C099F6C0062B314 /* Token.cpp */,
+				38DE04511C099F6C0062B314 /* Token.hpp */,
+				38DE04591C099F9B0062B314 /* File.cpp */,
+				38DE045A1C099F9B0062B314 /* File.hpp */,
+				38DE04531C099F750062B314 /* Shingle.cpp */,
+				38DE04541C099F750062B314 /* Shingle.hpp */,
+				38DE04561C099F810062B314 /* Babbler.cpp */,
+				38DE04571C099F810062B314 /* Babbler.hpp */,
+			);
+			path = Babble;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38DE04451C099E170062B314 /* Babble */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38DE044D1C099E170062B314 /* Build configuration list for PBXNativeTarget "Babble" */;
+			buildPhases = (
+				38DE04421C099E170062B314 /* Sources */,
+				38DE04431C099E170062B314 /* Frameworks */,
+				38DE04441C099E170062B314 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Babble;
+			productName = Babble;
+			productReference = 38DE04461C099E170062B314 /* Babble */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38DE043E1C099E170062B314 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = CS3005;
+				TargetAttributes = {
+					38DE04451C099E170062B314 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 38DE04411C099E170062B314 /* Build configuration list for PBXProject "Babble" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 38DE043D1C099E170062B314;
+			productRefGroup = 38DE04471C099E170062B314 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38DE04451C099E170062B314 /* Babble */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38DE04421C099E170062B314 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DE044A1C099E170062B314 /* main.cpp in Sources */,
+				38DE04551C099F750062B314 /* Shingle.cpp in Sources */,
+				38DE04581C099F810062B314 /* Babbler.cpp in Sources */,
+				38DE04521C099F6C0062B314 /* Token.cpp in Sources */,
+				38DE045B1C099F9B0062B314 /* File.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		38DE044B1C099E170062B314 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		38DE044C1C099E170062B314 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		38DE044E1C099E170062B314 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		38DE044F1C099E170062B314 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38DE04411C099E170062B314 /* Build configuration list for PBXProject "Babble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38DE044B1C099E170062B314 /* Debug */,
+				38DE044C1C099E170062B314 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38DE044D1C099E170062B314 /* Build configuration list for PBXNativeTarget "Babble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38DE044E1C099E170062B314 /* Debug */,
+				38DE044F1C099E170062B314 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38DE043E1C099E170062B314 /* Project object */;
+}

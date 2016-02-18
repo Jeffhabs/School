@@ -1,0 +1,118 @@
+mysql> source jhaberle12.sql;
+Database changed
+--------------
+create table TaxAreaAuthority
+(
+	TaxAuthority	varchar(25)	not null
+	, TaxArea	varchar(25)	not null
+)
+--------------
+
+Query OK, 0 rows affected (0.04 sec)
+
+--------------
+insert into TaxAreaAuthority
+(
+	TaxAuthority
+	, TaxArea
+)
+values 
+('city1'	, 'city1')
+,('city2'	, 'city2')
+,('city3'	, 'city3')
+,('county1'	, 'city1')
+,('county1'	, 'city2')
+,('county2'	, 'city3')
+,('state1'	, 'city1')
+,('state1'	, 'city2')
+,('state1'	, 'city3')
+--------------
+
+Query OK, 9 rows affected (0.02 sec)
+Records: 9  Duplicates: 0  Warnings: 0
+
+--------------
+create table TaxRates
+(
+	TaxAuthority	varchar(25)	not null
+	, Effective	date		not null
+	, AuthTaxRate	decimal(2,1)	not null
+)
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+insert into TaxRates
+(
+	TaxAuthority
+	, Effective
+	, AuthTaxRate
+)
+values
+('city1'	, '1993-01-01'	,1)
+,('city1'	, '1994-01-01'	,1.5)
+,('city2'	, '1993-09-01'	,1.5)
+,('city2'	, '1994-01-01'	,2)
+,('city2'	, '1995-01-01' 	,2.5)
+,('city3'	, '1993-01-01'	,1.9)
+,('city3'	, '1993-07-01'	,2.3)
+,('county1'	, '1993-01-01'	,2.3)
+,('county1'	, '1994-10-01'	,2.5)
+,('county1'	, '1995-01-01'	,2.7)
+,('county2'	, '1993-01-01'	,2.4)
+,('county2'	, '1994-01-01'	,2.7)
+,('county2'	, '1995-01-01'	,2.8)
+,('state1'	, '1993-01-01'	,0.5)
+,('state1'	, '1994-01-01'	,0.8)
+,('state1'	, '1994-07-01'	,0.9)
+,('state1'	, '1994-10-01'	,1.1)
+--------------
+
+Query OK, 17 rows affected (0.01 sec)
+Records: 17  Duplicates: 0  Warnings: 0
+
+--------------
+select TaxAuthority from TaxAreaAuthority where TaxArea ='city2' and TaxAuthority like 'county%'
+--------------
+
++--------------+
+| TaxAuthority |
++--------------+
+| county1      |
++--------------+
+1 row in set (0.00 sec)
+
+--------------
+select TaxAuthority from TaxAreaAuthority where TaxArea ='city2' and TaxAuthority like 'state%'
+--------------
+
++--------------+
+| TaxAuthority |
++--------------+
+| state1       |
++--------------+
+1 row in set (0.00 sec)
+
+--------------
+select t.TaxAuthority
+,	t.AuthTaxRate
+from TaxRates t 
+	join( select max(Effective) as mostRecent 
+	, TaxAuthority
+	from TaxRates
+	where TaxAuthority ='city2'
+	group by TaxAuthority
+	) as sub
+	on t.TaxAuthority = sub.TaxAuthority 
+	and t.Effective = sub.mostRecent
+--------------
+
++--------------+-------------+
+| TaxAuthority | AuthTaxRate |
++--------------+-------------+
+| city2        |         2.5 |
++--------------+-------------+
+1 row in set (0.02 sec)
+
+mysql> exit

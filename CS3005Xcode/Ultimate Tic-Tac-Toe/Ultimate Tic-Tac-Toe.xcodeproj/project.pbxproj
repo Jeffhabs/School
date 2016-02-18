@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3821F58D1C1890D000CD11CF /* Line.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3821F58B1C1890D000CD11CF /* Line.cpp */; };
+		3821F5901C1890F100CD11CF /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3821F58E1C1890F100CD11CF /* Point.cpp */; };
+		384D80D61C17DC4F009D250A /* GameBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384D80D41C17DC4F009D250A /* GameBoard.cpp */; };
+		384D80D91C17DC5F009D250A /* GameLogic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384D80D71C17DC5F009D250A /* GameLogic.cpp */; };
+		384D80DC1C17DC6D009D250A /* GameGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384D80DA1C17DC6D009D250A /* GameGrid.cpp */; };
+		384D80DF1C17DC85009D250A /* OpenGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384D80DD1C17DC85009D250A /* OpenGL.cpp */; };
+		384D80E21C17DC8F009D250A /* Square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384D80E01C17DC8F009D250A /* Square.cpp */; };
+		384D80E51C17DC9D009D250A /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384D80E31C17DC9D009D250A /* Tile.cpp */; };
+		38B39A291C1E6AD80068B895 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B39A281C1E6AD80068B895 /* OpenGL.framework */; };
+		38B39A2B1C1E6AE10068B895 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B39A2A1C1E6AE10068B895 /* Cocoa.framework */; };
+		38B39A2D1C1E6AE80068B895 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B39A2C1C1E6AE80068B895 /* GLUT.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		384D80C51C17DB80009D250A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3821F58B1C1890D000CD11CF /* Line.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Line.cpp; sourceTree = "<group>"; };
+		3821F58C1C1890D000CD11CF /* Line.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Line.hpp; sourceTree = "<group>"; };
+		3821F58E1C1890F100CD11CF /* Point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Point.cpp; sourceTree = "<group>"; };
+		3821F58F1C1890F100CD11CF /* Point.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Point.hpp; sourceTree = "<group>"; };
+		3821F5911C1892CD00CD11CF /* glut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glut.h; sourceTree = "<group>"; };
+		384D80C71C17DB80009D250A /* Ultimate Tic-Tac-Toe */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Ultimate Tic-Tac-Toe"; sourceTree = BUILT_PRODUCTS_DIR; };
+		384D80D41C17DC4F009D250A /* GameBoard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameBoard.cpp; sourceTree = "<group>"; };
+		384D80D51C17DC4F009D250A /* GameBoard.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameBoard.hpp; sourceTree = "<group>"; };
+		384D80D71C17DC5F009D250A /* GameLogic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameLogic.cpp; sourceTree = "<group>"; };
+		384D80D81C17DC5F009D250A /* GameLogic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameLogic.hpp; sourceTree = "<group>"; };
+		384D80DA1C17DC6D009D250A /* GameGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameGrid.cpp; sourceTree = "<group>"; };
+		384D80DB1C17DC6D009D250A /* GameGrid.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameGrid.hpp; sourceTree = "<group>"; };
+		384D80DD1C17DC85009D250A /* OpenGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGL.cpp; sourceTree = "<group>"; };
+		384D80DE1C17DC85009D250A /* OpenGL.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OpenGL.hpp; sourceTree = "<group>"; };
+		384D80E01C17DC8F009D250A /* Square.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Square.cpp; sourceTree = "<group>"; };
+		384D80E11C17DC8F009D250A /* Square.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Square.hpp; sourceTree = "<group>"; };
+		384D80E31C17DC9D009D250A /* Tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tile.cpp; sourceTree = "<group>"; };
+		384D80E41C17DC9D009D250A /* Tile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tile.hpp; sourceTree = "<group>"; };
+		38B39A281C1E6AD80068B895 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		38B39A2A1C1E6AE10068B895 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		38B39A2C1C1E6AE80068B895 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		384D80C41C17DB80009D250A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38B39A2D1C1E6AE80068B895 /* GLUT.framework in Frameworks */,
+				38B39A2B1C1E6AE10068B895 /* Cocoa.framework in Frameworks */,
+				38B39A291C1E6AD80068B895 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		384D80BE1C17DB80009D250A = {
+			isa = PBXGroup;
+			children = (
+				38B39A2C1C1E6AE80068B895 /* GLUT.framework */,
+				38B39A2A1C1E6AE10068B895 /* Cocoa.framework */,
+				38B39A281C1E6AD80068B895 /* OpenGL.framework */,
+				384D80C91C17DB80009D250A /* Ultimate Tic-Tac-Toe */,
+				384D80C81C17DB80009D250A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		384D80C81C17DB80009D250A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				384D80C71C17DB80009D250A /* Ultimate Tic-Tac-Toe */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		384D80C91C17DB80009D250A /* Ultimate Tic-Tac-Toe */ = {
+			isa = PBXGroup;
+			children = (
+				3821F5911C1892CD00CD11CF /* glut.h */,
+				384D80D41C17DC4F009D250A /* GameBoard.cpp */,
+				384D80D51C17DC4F009D250A /* GameBoard.hpp */,
+				384D80D71C17DC5F009D250A /* GameLogic.cpp */,
+				384D80D81C17DC5F009D250A /* GameLogic.hpp */,
+				384D80DA1C17DC6D009D250A /* GameGrid.cpp */,
+				384D80DB1C17DC6D009D250A /* GameGrid.hpp */,
+				384D80DD1C17DC85009D250A /* OpenGL.cpp */,
+				384D80DE1C17DC85009D250A /* OpenGL.hpp */,
+				384D80E01C17DC8F009D250A /* Square.cpp */,
+				384D80E11C17DC8F009D250A /* Square.hpp */,
+				384D80E31C17DC9D009D250A /* Tile.cpp */,
+				384D80E41C17DC9D009D250A /* Tile.hpp */,
+				3821F58B1C1890D000CD11CF /* Line.cpp */,
+				3821F58C1C1890D000CD11CF /* Line.hpp */,
+				3821F58E1C1890F100CD11CF /* Point.cpp */,
+				3821F58F1C1890F100CD11CF /* Point.hpp */,
+			);
+			path = "Ultimate Tic-Tac-Toe";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		384D80C61C17DB80009D250A /* Ultimate Tic-Tac-Toe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 384D80CE1C17DB80009D250A /* Build configuration list for PBXNativeTarget "Ultimate Tic-Tac-Toe" */;
+			buildPhases = (
+				384D80C31C17DB80009D250A /* Sources */,
+				384D80C41C17DB80009D250A /* Frameworks */,
+				384D80C51C17DB80009D250A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ultimate Tic-Tac-Toe";
+			productName = "Ultimate Tic-Tac-Toe";
+			productReference = 384D80C71C17DB80009D250A /* Ultimate Tic-Tac-Toe */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		384D80BF1C17DB80009D250A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = CS3005;
+				TargetAttributes = {
+					384D80C61C17DB80009D250A = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 384D80C21C17DB80009D250A /* Build configuration list for PBXProject "Ultimate Tic-Tac-Toe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 384D80BE1C17DB80009D250A;
+			productRefGroup = 384D80C81C17DB80009D250A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				384D80C61C17DB80009D250A /* Ultimate Tic-Tac-Toe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		384D80C31C17DB80009D250A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				384D80D61C17DC4F009D250A /* GameBoard.cpp in Sources */,
+				3821F58D1C1890D000CD11CF /* Line.cpp in Sources */,
+				384D80DC1C17DC6D009D250A /* GameGrid.cpp in Sources */,
+				384D80D91C17DC5F009D250A /* GameLogic.cpp in Sources */,
+				3821F5901C1890F100CD11CF /* Point.cpp in Sources */,
+				384D80E21C17DC8F009D250A /* Square.cpp in Sources */,
+				384D80DF1C17DC85009D250A /* OpenGL.cpp in Sources */,
+				384D80E51C17DC9D009D250A /* Tile.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		384D80CC1C17DB80009D250A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		384D80CD1C17DB80009D250A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		384D80CF1C17DB80009D250A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		384D80D01C17DB80009D250A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		384D80C21C17DB80009D250A /* Build configuration list for PBXProject "Ultimate Tic-Tac-Toe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				384D80CC1C17DB80009D250A /* Debug */,
+				384D80CD1C17DB80009D250A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		384D80CE1C17DB80009D250A /* Build configuration list for PBXNativeTarget "Ultimate Tic-Tac-Toe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				384D80CF1C17DB80009D250A /* Debug */,
+				384D80D01C17DB80009D250A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 384D80BF1C17DB80009D250A /* Project object */;
+}

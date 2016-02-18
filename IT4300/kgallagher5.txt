@@ -1,0 +1,162 @@
+mysql> source kgallagher5.sql;
+Database changed
+--------------
+show tables
+--------------
+
++-----------------+
+| Tables_in_books |
++-----------------+
+| au_orders       |
+| authors         |
+| dups            |
+| employees       |
+| empsales        |
+| hier            |
+| publishers      |
+| roadtrip        |
+| royalties       |
+| telephones      |
+| temps           |
+| time_series     |
+| title_authors   |
+| titles          |
++-----------------+
+14 rows in set (0.00 sec)
+
+--------------
+select * from authors
+--------------
+
++-------+-----------+-------------+--------------+----------------------+---------------+-------+-------+
+| au_id | au_fname  | au_lname    | phone        | address              | city          | state | zip   |
++-------+-----------+-------------+--------------+----------------------+---------------+-------+-------+
+| A01   | Sarah     | Buchman     | 718-496-7223 | 75 West 205 St       | Bronx         | NY    | 10468 |
+| A02   | Wendy     | Heydemark   | 303-986-7020 | 2922 Baseline Rd     | Boulder       | CO    | 80303 |
+| A03   | Hallie    | Hull        | 415-549-4278 | 3800 Waldo Ave, #14F | San Francisco | CA    | 94123 |
+| A04   | Klee      | Hull        | 415-549-4278 | 3800 Waldo Ave, #14F | San Francisco | CA    | 94123 |
+| A05   | Christian | Kells       | 212-771-4680 | 114 Horatio St       | New York      | NY    | 10014 |
+| A06   |           | Kellsey     | 650-836-7128 | 390 Serra Mall       | Palo Alto     | CA    | 94305 |
+| A07   | Paddy     | O'Furniture | 941-925-0752 | 1442 Main St         | Sarasota      | FL    | 34236 |
++-------+-----------+-------------+--------------+----------------------+---------------+-------+-------+
+7 rows in set (0.00 sec)
+
+--------------
+select emp_id, emp_name from employees
+--------------
+
++--------+-------------------+
+| emp_id | emp_name          |
++--------+-------------------+
+| E01    | Lord Copper       |
+| E02    | Jocelyn Hitchcock |
+| E03    | Mr. Salter        |
+| E04    | William Boot      |
+| E05    | Mr. Corker        |
++--------+-------------------+
+5 rows in set (0.00 sec)
+
+--------------
+select distinct state from publishers
+--------------
+
++-------+
+| state |
++-------+
+| NY    |
+| CA    |
+| NULL  |
++-------+
+3 rows in set (0.00 sec)
+
+--------------
+select title_id, title_name, price from titles order by price desc
+--------------
+
++----------+-------------------------------------+-------+
+| title_id | title_name                          | price |
++----------+-------------------------------------+-------+
+| T03      | Ask Your System Administrator       | 39.95 |
+| T13      | What Are The Civilian Applications? | 29.99 |
+| T07      | I Blame My Mother                   | 23.95 |
+| T01      | 1977!                               | 21.99 |
+| T06      | How About Never?                    | 19.95 |
+| T02      | 200 Years of German Humor           | 19.95 |
+| T09      | Kiss My Boo-Boo                     | 13.95 |
+| T12      | Spontaneous, Not Annoying           | 12.99 |
+| T04      | But I Did It Unconsciously          | 12.99 |
+| T08      | Just Wait Until After School        | 10.00 |
+| T11      | Perhaps It's a Glandular Problem    |  7.99 |
+| T05      | Exchange of Platitudes              |  6.95 |
+| T10      | Not Without My Faberge Egg          |  NULL |
++----------+-------------------------------------+-------+
+13 rows in set (0.00 sec)
+
+--------------
+select title_id, title_name from titles where type = 'children'
+--------------
+
++----------+------------------------------+
+| title_id | title_name                   |
++----------+------------------------------+
+| T08      | Just Wait Until After School |
+| T09      | Kiss My Boo-Boo              |
++----------+------------------------------+
+2 rows in set (0.00 sec)
+
+--------------
+select title_id, title_name from titles where type != 'history' and type != 'biography'
+--------------
+
++----------+----------------------------------+
+| title_id | title_name                       |
++----------+----------------------------------+
+| T03      | Ask Your System Administrator    |
+| T04      | But I Did It Unconsciously       |
+| T05      | Exchange of Platitudes           |
+| T08      | Just Wait Until After School     |
+| T09      | Kiss My Boo-Boo                  |
+| T11      | Perhaps It's a Glandular Problem |
++----------+----------------------------------+
+6 rows in set (0.00 sec)
+
+--------------
+select au_id, au_fname, au_lname, phone from authors where phone like "%549%"
+--------------
+
++-------+----------+----------+--------------+
+| au_id | au_fname | au_lname | phone        |
++-------+----------+----------+--------------+
+| A03   | Hallie   | Hull     | 415-549-4278 |
+| A04   | Klee     | Hull     | 415-549-4278 |
++-------+----------+----------+--------------+
+2 rows in set (0.00 sec)
+
+--------------
+select au_id, au_fname, au_lname, zip from authors where zip > 90000 and zip < 99999
+--------------
+
++-------+----------+----------+-------+
+| au_id | au_fname | au_lname | zip   |
++-------+----------+----------+-------+
+| A03   | Hallie   | Hull     | 94123 |
+| A04   | Klee     | Hull     | 94123 |
+| A06   |          | Kellsey  | 94305 |
++-------+----------+----------+-------+
+3 rows in set (0.00 sec)
+
+--------------
+select au_id, au_fname, au_lname, state from authors where state = 'NY' or state = 'CA'
+--------------
+
++-------+-----------+----------+-------+
+| au_id | au_fname  | au_lname | state |
++-------+-----------+----------+-------+
+| A01   | Sarah     | Buchman  | NY    |
+| A03   | Hallie    | Hull     | CA    |
+| A04   | Klee      | Hull     | CA    |
+| A05   | Christian | Kells    | NY    |
+| A06   |           | Kellsey  | CA    |
++-------+-----------+----------+-------+
+5 rows in set (0.00 sec)
+

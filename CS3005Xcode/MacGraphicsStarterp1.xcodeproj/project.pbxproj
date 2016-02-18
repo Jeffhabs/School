@@ -1,0 +1,225 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B1787622180F554800ECCE22 /* graphics1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1787621180F554800ECCE22 /* graphics1.cpp */; };
+		D3EA612114BF56F5003EF908 /* MacGraphicsStarter.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D3EA612014BF56F5003EF908 /* MacGraphicsStarter.1 */; };
+		D3EA612914BF5760003EF908 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EA612714BF5760003EF908 /* GLUT.framework */; };
+		D3EA612A14BF5760003EF908 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EA612814BF5760003EF908 /* OpenGL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D3EA611814BF56F5003EF908 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				D3EA612114BF56F5003EF908 /* MacGraphicsStarter.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B1787621180F554800ECCE22 /* graphics1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = graphics1.cpp; sourceTree = "<group>"; };
+		D3EA611A14BF56F5003EF908 /* MacGraphicsStarter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MacGraphicsStarter; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3EA612014BF56F5003EF908 /* MacGraphicsStarter.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MacGraphicsStarter.1; sourceTree = "<group>"; };
+		D3EA612714BF5760003EF908 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		D3EA612814BF5760003EF908 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3EA611714BF56F5003EF908 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3EA612914BF5760003EF908 /* GLUT.framework in Frameworks */,
+				D3EA612A14BF5760003EF908 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D355F37714BF71440064E474 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3EA612714BF5760003EF908 /* GLUT.framework */,
+				D3EA612814BF5760003EF908 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3EA610F14BF56F5003EF908 = {
+			isa = PBXGroup;
+			children = (
+				D3EA611D14BF56F5003EF908 /* MacGraphicsStarter */,
+				D355F37714BF71440064E474 /* Frameworks */,
+				D3EA611B14BF56F5003EF908 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D3EA611B14BF56F5003EF908 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3EA611A14BF56F5003EF908 /* MacGraphicsStarter */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3EA611D14BF56F5003EF908 /* MacGraphicsStarter */ = {
+			isa = PBXGroup;
+			children = (
+				B1787621180F554800ECCE22 /* graphics1.cpp */,
+				D3EA612014BF56F5003EF908 /* MacGraphicsStarter.1 */,
+			);
+			path = MacGraphicsStarter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3EA611914BF56F5003EF908 /* MacGraphicsStarter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3EA612414BF56F5003EF908 /* Build configuration list for PBXNativeTarget "MacGraphicsStarter" */;
+			buildPhases = (
+				D3EA611614BF56F5003EF908 /* Sources */,
+				D3EA611714BF56F5003EF908 /* Frameworks */,
+				D3EA611814BF56F5003EF908 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacGraphicsStarter;
+			productName = MacGraphicsStarter;
+			productReference = D3EA611A14BF56F5003EF908 /* MacGraphicsStarter */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3EA611114BF56F5003EF908 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = D3EA611414BF56F5003EF908 /* Build configuration list for PBXProject "MacGraphicsStarter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D3EA610F14BF56F5003EF908;
+			productRefGroup = D3EA611B14BF56F5003EF908 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3EA611914BF56F5003EF908 /* MacGraphicsStarter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3EA611614BF56F5003EF908 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1787622180F554800ECCE22 /* graphics1.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D3EA612214BF56F5003EF908 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D3EA612314BF56F5003EF908 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D3EA612514BF56F5003EF908 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D3EA612614BF56F5003EF908 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3EA611414BF56F5003EF908 /* Build configuration list for PBXProject "MacGraphicsStarter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3EA612214BF56F5003EF908 /* Debug */,
+				D3EA612314BF56F5003EF908 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3EA612414BF56F5003EF908 /* Build configuration list for PBXNativeTarget "MacGraphicsStarter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3EA612514BF56F5003EF908 /* Debug */,
+				D3EA612614BF56F5003EF908 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D3EA611114BF56F5003EF908 /* Project object */;
+}

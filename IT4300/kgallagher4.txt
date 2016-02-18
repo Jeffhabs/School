@@ -1,0 +1,189 @@
+mysql> source kgallagher4.sql;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+--------------
+describe au_orders
+--------------
+
++----------+---------+------+-----+---------+-------+
+| Field    | Type    | Null | Key | Default | Extra |
++----------+---------+------+-----+---------+-------+
+| title_id | char(3) | YES  |     | NULL    |       |
+| author1  | char(3) | YES  |     | NULL    |       |
+| author2  | char(3) | YES  |     | NULL    |       |
+| author3  | char(3) | YES  |     | NULL    |       |
++----------+---------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+--------------
+describe authors
+--------------
+
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| au_id    | char(3)     | NO   | PRI | NULL    |       |
+| au_fname | varchar(15) | NO   |     | NULL    |       |
+| au_lname | varchar(15) | NO   |     | NULL    |       |
+| phone    | varchar(12) | YES  |     | NULL    |       |
+| address  | varchar(20) | YES  |     | NULL    |       |
+| city     | varchar(15) | YES  |     | NULL    |       |
+| state    | char(2)     | YES  |     | NULL    |       |
+| zip      | char(5)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+--------------
+describe dups
+--------------
+
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| id         | int(11)      | YES  |     | NULL    |       |
+| title_name | varchar(40)  | YES  |     | NULL    |       |
+| type       | varchar(10)  | YES  |     | NULL    |       |
+| price      | decimal(5,2) | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+--------------
+describe employees
+--------------
+
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| emp_id   | char(3)     | NO   | PRI | NULL    |       |
+| emp_name | varchar(20) | NO   |     | NULL    |       |
+| boss_id  | char(3)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+--------------
+describe hier
+--------------
+
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| emp_id    | char(3)     | NO   | PRI | NULL    |       |
+| emp_title | varchar(20) | NO   |     | NULL    |       |
+| boss_id   | char(3)     | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+--------------
+describe publishers
+--------------
+
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| pub_id   | char(3)     | NO   | PRI | NULL    |       |
+| pub_name | varchar(20) | NO   |     | NULL    |       |
+| city     | varchar(15) | NO   |     | NULL    |       |
+| state    | char(2)     | YES  |     | NULL    |       |
+| country  | varchar(15) | NO   |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+--------------
+describe roadtrip
+--------------
+
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| seq   | int(11)     | NO   | PRI | NULL    |       |
+| city  | varchar(17) | NO   |     | NULL    |       |
+| miles | double      | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+--------------
+describe royalties
+--------------
+
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| title_id     | char(3)      | NO   | PRI | NULL    |       |
+| advance      | decimal(9,2) | YES  |     | NULL    |       |
+| royalty_rate | decimal(5,2) | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+--------------
+describe telephones
+--------------
+
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| au_id    | char(3)  | NO   | PRI | NULL    |       |
+| tel_type | char(1)  | NO   | PRI | NULL    |       |
+| tel_no   | char(12) | NO   |     | NULL    |       |
++----------+----------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+--------------
+describe temps
+--------------
+
++---------+---------+------+-----+---------+-------+
+| Field   | Type    | Null | Key | Default | Extra |
++---------+---------+------+-----+---------+-------+
+| id      | int(11) | NO   | PRI | NULL    |       |
+| hi_temp | int(11) | NO   |     | NULL    |       |
++---------+---------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+--------------
+describe time_series
+--------------
+
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| seq   | int(11) | NO   | PRI | NULL    |       |
+| price | double  | NO   |     | NULL    |       |
++-------+---------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+--------------
+describe title_authors
+--------------
+
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| title_id      | char(3)      | NO   | PRI | NULL    |       |
+| au_id         | char(3)      | NO   | PRI | NULL    |       |
+| au_order      | smallint(6)  | NO   |     | NULL    |       |
+| royalty_share | decimal(5,2) | NO   |     | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+--------------
+describe titles
+--------------
+
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| title_id   | char(3)      | NO   | PRI | NULL    |       |
+| title_name | varchar(40)  | NO   |     | NULL    |       |
+| type       | varchar(10)  | YES  |     | NULL    |       |
+| pub_id     | char(3)      | NO   |     | NULL    |       |
+| pages      | int(11)      | YES  |     | NULL    |       |
+| price      | decimal(5,2) | YES  |     | NULL    |       |
+| sales      | int(11)      | YES  |     | NULL    |       |
+| pubdate    | date         | YES  |     | NULL    |       |
+| contract   | smallint(6)  | NO   |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+9 rows in set (0.00 sec)
+
+mysql> exit

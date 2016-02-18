@@ -1,0 +1,10 @@
+void main()
+{
+	int sum;
+	sum = 3 + 400;
+	cout << sum;
+    //&
+    |
+    %
+
+}
