@@ -153,7 +153,7 @@ MachineState StateMachineClass::UpdateState(char currentCharacter, TokenType &co
     
     if(charType == BAD_CHAR) {
         cerr << "Bad Character'" << currentCharacter <<"'" << endl;
-        //exit(1);
+        exit(1);
     }
     
     correspondingTokenType = mCorrespondingTokenTypes[mCurrentState];

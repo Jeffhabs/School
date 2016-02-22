@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MusicEvent</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="enter_zip_text">Enter Zip</string>
+    <string name="music_events_title">MusicEvents</string>
+    <string name="enter_zip"></string>
+    <string name="title_activity_event_listing">EventListing</string>
+
+
+</resources>

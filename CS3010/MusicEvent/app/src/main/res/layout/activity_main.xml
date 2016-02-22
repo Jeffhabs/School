@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical"
+              tools:context="com.example.jeffreyhaberle.musicevent.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top|center">
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="112dp"
+        android:layout_height="166dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/music2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/music_events_title"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/title"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/enter_zip"
+        android:layout_gravity="center_horizontal"
+        android:autoText="false"
+        android:inputType="text"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Zip"
+        android:id="@+id/enter_zip_button"
+        android:layout_gravity="center_horizontal"
+        android:padding="4dp"/>
+
+</LinearLayout>
+

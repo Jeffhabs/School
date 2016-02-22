@@ -14,7 +14,7 @@ using namespace std;
 
 ScannerClass::ScannerClass(const char *fileIn) {
     mFin.open(fileIn);
-    mLine = 1;
+    mLineNumber = 1;
 }
 
 TokenClass ScannerClass::GetNextToken() {
@@ -28,7 +28,7 @@ TokenClass ScannerClass::GetNextToken() {
         char c = mFin.get();
         lexeme += c;
         if (c == '\n') {
-            mLine++;
+            mLineNumber++;
         }
         currentState = stateMachine.UpdateState(c, correspondingTokenType);
         if (currentState == START_STATE || currentState == END_OF_FILE_STATE) lexeme = "";
@@ -40,7 +40,7 @@ TokenClass ScannerClass::GetNextToken() {
     }
     
     if (lexeme.back() == '\n') {
-        mLine--;
+        mLineNumber--;
     }
     
     mFin.unget();
@@ -48,4 +48,8 @@ TokenClass ScannerClass::GetNextToken() {
     TokenClass token(correspondingTokenType, lexeme);
     token.CheckReserved();
     return token;
+}
+
+int ScannerClass::GetLineNumber() {
+    return mLineNumber;
 }

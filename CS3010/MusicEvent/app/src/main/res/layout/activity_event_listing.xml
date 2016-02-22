@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical"
+              tools:context="com.example.jeffreyhaberle.musicevent.EventListing">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="161dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/music2"
+        android:layout_gravity="top|right"
+        android:padding="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Event Listing For"
+        android:id="@+id/text_event_listing"
+        android:layout_gravity="center_horizontal"
+        android:padding="6dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/events_zip_text"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listViewMain">
+
+        </ListView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

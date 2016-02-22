@@ -18,10 +18,11 @@ class ScannerClass {
 public:
     ScannerClass(const char *fileName);
     TokenClass GetNextToken();
+    int GetLineNumber();
     
 private:
     ifstream  mFin;
-    int mLine;
+    int mLineNumber;
 };
 
 
