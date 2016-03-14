@@ -19,6 +19,7 @@ public:
     ScannerClass(const char *fileName);
     TokenClass GetNextToken();
     int GetLineNumber();
+    TokenClass PeekNextToken();
     
 private:
     ifstream  mFin;

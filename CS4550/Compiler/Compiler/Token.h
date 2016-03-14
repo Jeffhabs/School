@@ -15,26 +15,34 @@ using namespace std;
 
 enum TokenType {
     // Reserved Words:
-    VOID_TOKEN, MAIN_TOKEN, INT_TOKEN, COUT_TOKEN,
+    VOID_TOKEN, MAIN_TOKEN, INT_TOKEN, COUT_TOKEN, ENDL_TOKEN,
     // Relational Operators:
     LESS_TOKEN, LESS_EQUAL_TOKEN, GREATER_TOKEN, GREATER_EQUAL_TOKEN, EQUAL_TOKEN, NOTEQUAL_TOKEN,
     // Other Operators:
     INSERTION_TOKEN, ASSIGNMENT_TOKEN, PLUS_TOKEN, MINUS_TOKEN, TIMES_TOKEN, DIVIDE_TOKEN,
+    OR_TOKEN, AND_TOKEN, EXPONENT_TOKEN, NOT_TOKEN,
     // Other Characters:
-    SEMICOLON_TOKEN, LPAREN_TOKEN, RPAREN_TOKEN, LCURLY_TOKEN,
-    RCURLY_TOKEN,
+    SEMICOLON_TOKEN, LPAREN_TOKEN, RPAREN_TOKEN, LCURLY_TOKEN, RCURLY_TOKEN,
     // Other Token Types:
     IDENTIFIER_TOKEN, INTEGER_TOKEN,
     BAD_TOKEN, END_FILE_TOKEN
 };
 
 const string gTokenTypeNames[] = {
-    "VOID", "MAIN", "INT", "COUT",
+    //reserved
+    "VOID", "MAIN", "INT", "COUT", "ENDL"
+    
+    
+    //relational
     "LESS", "LESSEQUAL", "GREATER", "GREATEREQUAL", "EQUAL", "NOTEQUAL",
     "INSERTION", "ASSIGNMENT", "PLUS", "MINUS", "TIMES", "DIVIDE",
+    "OR", "AND", "EXPONENT", "NOT",
+    
+    //other
     "SEMICOLON", "LPAREN", "RPAREN", "LCURLY", "RCURLY",
-    "IDENTIFIER", "INTEGER",
-    "BAD", "ENDFILE"
+    
+    //other
+    "IDENTIFIER", "INTEGER", "BAD", "ENDFILE"
 };
 
 class TokenClass

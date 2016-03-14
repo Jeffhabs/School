@@ -25,8 +25,8 @@ StateMachineClass::StateMachineClass() {
     }
     
     mLegalMoves[LINE_COMMENT_STATE][NEW_LINE_CHAR] = START_STATE;
-    mLegalMoves[BLOCK_COMMENT1_STATE][TIMES_CHAR] = BLOCK_COMMENT2_STATE;
-    mLegalMoves[BLOCK_COMMENT2_STATE][TIMES_CHAR] = BLOCK_COMMENT2_STATE;
+    mLegalMoves[BLOCK_COMMENT1_STATE][TIMES_CHAR] = BLOCK_COMMENT2_STATE; //ALMOST END OF BLOCK COMMENT STATE
+    mLegalMoves[BLOCK_COMMENT2_STATE][TIMES_CHAR] = BLOCK_COMMENT2_STATE; // /* * *
     mLegalMoves[BLOCK_COMMENT2_STATE][DIVIDE_CHAR] = START_STATE;
     
     /* end of file */
@@ -71,7 +71,11 @@ StateMachineClass::StateMachineClass() {
     mLegalMoves[START_STATE][TIMES_CHAR] = TIMES_STATE;
     mLegalMoves[START_STATE][DIVIDE_CHAR] = DIVIDE_STATE;
     mLegalMoves[DIVIDE_STATE][DIVIDE_CHAR] = LINE_COMMENT_STATE;
-    mLegalMoves[DIVIDE_STATE][TIMES_CHAR] = BLOCK_COMMENT1_STATE;
+    mLegalMoves[DIVIDE_STATE][TIMES_CHAR] = BLOCK_COMMENT1_STATE; //beginning state for block_comment1_state
+    
+    /* != not equal */
+    mLegalMoves[START_STATE][BANG_CHAR] = ALMOST_NOT_EQUAL_STATE;
+    mLegalMoves[ALMOST_NOT_EQUAL_STATE][EQUAL_CHAR] = NOTEQUAL_STATE;
     
     /* insertion */
     mLegalMoves[LESS_STATE][LESS_CHAR] = INSERTION_STATE;
@@ -98,6 +102,8 @@ StateMachineClass::StateMachineClass() {
     mCorrespondingTokenTypes[LESS_EQUAL_STATE]    = LESS_EQUAL_TOKEN;
     mCorrespondingTokenTypes[GREATER_EQUAL_STATE] = GREATER_EQUAL_TOKEN;
     //mCorrespondingTokenTypes[AND_STATE]           = AND_TOKEN;
+    //or
+    //not
     mCorrespondingTokenTypes[PLUS_STATE]          = PLUS_TOKEN;
     mCorrespondingTokenTypes[MINUS_STATE]         = MINUS_TOKEN;
     mCorrespondingTokenTypes[TIMES_STATE]         = TIMES_TOKEN;
@@ -147,6 +153,8 @@ MachineState StateMachineClass::UpdateState(char currentCharacter, TokenType &co
         charType = DIVIDE_CHAR;
     if(currentCharacter == '\n')
         charType = NEW_LINE_CHAR;
+    if(currentCharacter == '!')
+        charType = BANG_CHAR;
     if(currentCharacter == EOF )
         charType = END_OF_FILE_CHAR;
     

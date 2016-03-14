@@ -50,6 +50,30 @@ TokenClass ScannerClass::GetNextToken() {
     return token;
 }
 
+TokenClass ScannerClass::PeekNextToken() {
+    long position = mFin.tellg();
+    int line = mLineNumber;
+    TokenClass tc = GetNextToken();
+    if(!mFin) {
+        mFin.clear();
+    }
+    mFin.seekg(position);
+    mLineNumber = line;
+    
+    return tc;
+}
+
+
 int ScannerClass::GetLineNumber() {
     return mLineNumber;
 }
+
+
+
+
+
+
+
+
+
+

@@ -11,16 +11,12 @@
 #include "Token.h"
 #include "Scanner.h"
 #include "Symbol.h"
+#include "Node.h"
+#include "Parser.h"
+
 using namespace std;
 
-int main()
-{
-//    TokenType tt = VOID_TOKEN;
-//    string lexeme = "void";
-//    TokenClass tok1(tt, lexeme);
-//    cout << tok1 << endl;
-    
-/*
+void testScanner() {
     ScannerClass scanner("test.txt");
     TokenClass token;
     
@@ -28,7 +24,10 @@ int main()
         token = scanner.GetNextToken();
         cout << token << " " << scanner.GetLineNumber() << endl;
     } while (token.GetTokenType() != END_FILE_TOKEN);
-*/
+}
+
+void testSymbolTable() {
+    
     SymbolTableClass table;
     
     assert(table.GetCount()== 0);
@@ -44,12 +43,23 @@ int main()
     table.SetValue("test", 2);
     assert(table.GetValue("test")==2);
     
-   //table.SetValue("fail", 2);
-    table.AddEntry("test"); //already exists
+    //table.SetValue("fail", 2); //variable does not exist
+    table.GetValue("test");
+    //table.AddEntry("test"); //already exists
     table.GetValue("fail");
+}
 
+void testParser() {
+    SymbolTableClass symbolTable;
+    ScannerClass scanner("/Users/jeffreyhaberle/School/CS4550/Compiler/Compiler/test.txt");
+    ParserClass parser(&scanner, &symbolTable);
+    StartNode *root = parser.Start();
     
-    
+}
+
+int main()
+{
+    testParser();
 
 }
 
