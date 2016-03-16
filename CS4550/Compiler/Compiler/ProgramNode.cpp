@@ -18,3 +18,13 @@ ProgramNode::~ProgramNode() {
     MSG("ProgramNode Destructor");
     delete mBlockNode;
 }
+
+void ProgramNode::Interpret() {
+    mBlockNode->Interpret();
+}
+
+/*
+void ProgramNode::Code(InstructionsClass &machineCode) {
+    mBlockNode->Code(machineCode);
+}
+*/

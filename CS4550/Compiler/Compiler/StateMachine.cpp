@@ -30,8 +30,8 @@ StateMachineClass::StateMachineClass() {
     mLegalMoves[BLOCK_COMMENT2_STATE][DIVIDE_CHAR] = START_STATE;
     
     /* end of file */
-    mLegalMoves[LINE_COMMENT_STATE][END_OF_FILE_CHAR] = END_OF_FILE_STATE;
-    mLegalMoves[START_STATE][END_OF_FILE_CHAR] = END_OF_FILE_STATE;
+    mLegalMoves[LINE_COMMENT_STATE][EOF_CHAR] = EOF_STATE;
+    mLegalMoves[START_STATE][EOF_CHAR] = EOF_STATE;
     
     /* Paren */
     mLegalMoves[START_STATE][LPAREN_CHAR] = LPAREN_STATE;
@@ -73,17 +73,32 @@ StateMachineClass::StateMachineClass() {
     mLegalMoves[DIVIDE_STATE][DIVIDE_CHAR] = LINE_COMMENT_STATE;
     mLegalMoves[DIVIDE_STATE][TIMES_CHAR] = BLOCK_COMMENT1_STATE; //beginning state for block_comment1_state
     
+    
     /* != not equal */
-    mLegalMoves[START_STATE][BANG_CHAR] = ALMOST_NOT_EQUAL_STATE;
-    mLegalMoves[ALMOST_NOT_EQUAL_STATE][EQUAL_CHAR] = NOTEQUAL_STATE;
+   // mLegalMoves[START_STATE][BANG_CHAR] = ALMOST_NOT_EQUAL_STATE;
+   // mLegalMoves[ALMOST_NOT_EQUAL_STATE][EQUAL_CHAR] = NOTEQUAL_STATE;
     
     /* insertion */
     mLegalMoves[LESS_STATE][LESS_CHAR] = INSERTION_STATE;
     
     /* whitespace */
-    mLegalMoves[START_STATE][WHITE_SPACE_CHAR] = START_STATE;
+    mLegalMoves[START_STATE][WHITESPACE_CHAR] = START_STATE;
     mLegalMoves[START_STATE][NEW_LINE_CHAR] = START_STATE;
     
+    /* // */
+    mLegalMoves[START_STATE][PIPE_CHAR] = PIPE1_STATE;
+    mLegalMoves[PIPE1_STATE][PIPE_CHAR] = OR_STATE;
+    
+    // &&
+    mLegalMoves[START_STATE][AMPERSAND_CHAR] = AMPERSAND1_STATE;
+    mLegalMoves[AMPERSAND1_STATE][AMPERSAND_CHAR] = AND_STATE;
+    
+    // += -=
+    mLegalMoves[PLUS_STATE][EQUAL_CHAR] = PLUS_EQUAL_STATE;
+    mLegalMoves[MINUS_STATE][EQUAL_CHAR] = MINUS_EQUAL_STATE;
+    
+    // ^
+    mLegalMoves[START_STATE][EXPONENT_CHAR] = EXPONENT_STATE;
     
     for(int i = 0; i<LAST_STATE; i++) {
         mCorrespondingTokenTypes[i] = BAD_TOKEN;
@@ -101,20 +116,18 @@ StateMachineClass::StateMachineClass() {
     mCorrespondingTokenTypes[GREATER_STATE]       = GREATER_TOKEN;
     mCorrespondingTokenTypes[LESS_EQUAL_STATE]    = LESS_EQUAL_TOKEN;
     mCorrespondingTokenTypes[GREATER_EQUAL_STATE] = GREATER_EQUAL_TOKEN;
-    //mCorrespondingTokenTypes[AND_STATE]           = AND_TOKEN;
-    //or
-    //not
+    mCorrespondingTokenTypes[OR_STATE]            = OR_TOKEN;
+    mCorrespondingTokenTypes[AND_STATE]           = AND_TOKEN;
     mCorrespondingTokenTypes[PLUS_STATE]          = PLUS_TOKEN;
     mCorrespondingTokenTypes[MINUS_STATE]         = MINUS_TOKEN;
     mCorrespondingTokenTypes[TIMES_STATE]         = TIMES_TOKEN;
     mCorrespondingTokenTypes[DIVIDE_TOKEN]        = DIVIDE_TOKEN;
-    //mCorrespondingTokenTypes[EXPONENT_STATE]      = EXPONENT_TOKEN;
-    //mCorrespondingTokenTypes[PLUS_EQUAL_STATE]    = PLUS_EQUAL_TOKEN;
-    //mCorrespondingTokenTypes[MINUS_EQUAL_STATE]     = MINUS_EQUAL_TOKEN;
+    mCorrespondingTokenTypes[EXPONENT_STATE]      = EXPONENT_TOKEN;
+    mCorrespondingTokenTypes[PLUS_EQUAL_STATE]    = PLUS_EQUAL_TOKEN;
+    mCorrespondingTokenTypes[MINUS_EQUAL_STATE]     = MINUS_EQUAL_TOKEN;
     mCorrespondingTokenTypes[EQUAL_STATE]         = EQUAL_TOKEN;
     mCorrespondingTokenTypes[INSERTION_STATE]     = INSERTION_TOKEN;
-    mCorrespondingTokenTypes[END_OF_FILE_STATE]   = END_FILE_TOKEN;
-    
+    mCorrespondingTokenTypes[EOF_STATE]           = EOF_TOKEN;
 }
 
 MachineState StateMachineClass::UpdateState(char currentCharacter, TokenType &correspondingTokenType) {
@@ -126,7 +139,7 @@ MachineState StateMachineClass::UpdateState(char currentCharacter, TokenType &co
     if(isalpha(currentCharacter))
         charType = LETTER_CHAR;
     if(isspace(currentCharacter))
-        charType = WHITE_SPACE_CHAR;
+        charType = WHITESPACE_CHAR;
     if(currentCharacter == '+')
         charType = PLUS_CHAR;
     if(currentCharacter == '(')
@@ -153,10 +166,10 @@ MachineState StateMachineClass::UpdateState(char currentCharacter, TokenType &co
         charType = DIVIDE_CHAR;
     if(currentCharacter == '\n')
         charType = NEW_LINE_CHAR;
-    if(currentCharacter == '!')
-        charType = BANG_CHAR;
+    //if(currentCharacter == '!')
+    //    charType = BANG_CHAR;
     if(currentCharacter == EOF )
-        charType = END_OF_FILE_CHAR;
+        charType = EOF_CHAR;
     
     
     if(charType == BAD_CHAR) {

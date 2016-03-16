@@ -23,7 +23,7 @@ void testScanner() {
     do {
         token = scanner.GetNextToken();
         cout << token << " " << scanner.GetLineNumber() << endl;
-    } while (token.GetTokenType() != END_FILE_TOKEN);
+    } while (token.GetTokenType() != EOF_TOKEN);
 }
 
 void testSymbolTable() {
@@ -54,6 +54,7 @@ void testParser() {
     ScannerClass scanner("/Users/jeffreyhaberle/School/CS4550/Compiler/Compiler/test.txt");
     ParserClass parser(&scanner, &symbolTable);
     StartNode *root = parser.Start();
+    root->Interpret();
     
 }
 

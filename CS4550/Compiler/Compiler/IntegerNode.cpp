@@ -18,3 +18,10 @@ int IntegerNode::Evaluate() {
     MSG("IntegerNode Evaluate");
     return mInteger;
 }
+
+/*
+void IntegerNode::CodeEvaluate(InstructionsClass &machineCode) {
+    MSG("IntegerNode CodeEvaluate");
+    machineCode.PushValue(this->mValue);
+}
+*/

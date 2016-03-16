@@ -18,3 +18,13 @@ BlockNode::~BlockNode() {
     MSG("BlockNode Destructor")
     delete mStatementGroupNode;
 }
+
+void BlockNode::Interpret() {
+    MSG("BlockNode interpret");
+    mStatementGroupNode->Interpret();
+}
+/*
+void BlockNode::Code(InstructionsClass &machineCode) {
+    mStatementGroupNode->Code(machineCode);
+}
+*/

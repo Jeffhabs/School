@@ -21,7 +21,7 @@ ParserClass::ParserClass(ScannerClass *scanner, SymbolTableClass *symbolT)
 
 StartNode * ParserClass::Start() {
     ProgramNode *pn = Program();
-    Match(END_FILE_TOKEN);
+    Match(EOF_TOKEN);
     StartNode *sn = new StartNode(pn);
     return sn;
 }
@@ -85,6 +85,12 @@ StatementNode * ParserClass::Statement() {
     }
     else if (tt == LCURLY_TOKEN) {
         return Block();
+    }
+    else if (tt == IF_TOKEN) {
+        return IfStatement();
+    }
+    else if (tt == DO_TOKEN) {
+        return DoWhile();
     }
     return NULL;
 }
@@ -154,7 +160,7 @@ ExpressionNode * ParserClass::Expression() {
 }
 
 
-ExpressionNode * ParserClass::Or() {
+ExpressionNode* ParserClass::Or() {
     ExpressionNode *current = And();
     while (true) {
         TokenType tt = mScanner->PeekNextToken().GetTokenType();
@@ -184,12 +190,12 @@ ExpressionNode* ParserClass::And() {
     return current;
 }
 
-ExpressionNode * ParserClass::Relational() {
+ExpressionNode* ParserClass::Relational() {
     ExpressionNode * current = Side();
     TokenType tt = mScanner->PeekNextToken().GetTokenType();
     if (tt == LESS_TOKEN || tt == LESS_EQUAL_TOKEN ||
         tt == GREATER_TOKEN || tt == GREATER_EQUAL_TOKEN ||
-        tt == EQUAL_TOKEN || tt == NOTEQUAL_TOKEN) {
+        tt == EQUAL_TOKEN || tt == NOT_EQUAL_TOKEN) {
         Match(tt);
         if (tt == LESS_TOKEN)
             current = new LessNode(current, Relational());
@@ -201,13 +207,13 @@ ExpressionNode * ParserClass::Relational() {
             current = new GreaterEqualNode(current, Relational());
         else if(tt == EQUAL_TOKEN)
             current = new EqualNode(current, Relational());
-        else if(tt == NOTEQUAL_TOKEN)
+        else if(tt == NOT_EQUAL_TOKEN)
             current = new NotEqualNode(current, Relational());
     }
     return current;
 }
 
-ExpressionNode * ParserClass::Side() {
+ExpressionNode* ParserClass::Side() {
     ExpressionNode *current = Term();
     while(true) {
         TokenType tt = mScanner->PeekNextToken().GetTokenType();
@@ -243,7 +249,6 @@ ExpressionNode* ParserClass::Term() {
     }
 }
 
-/*
 ExpressionNode* ParserClass::Exponent() {
     ExpressionNode *current = Factor();
     while (true) {
@@ -257,7 +262,6 @@ ExpressionNode* ParserClass::Exponent() {
         }
     }
 }
-*/
 
 ExpressionNode* ParserClass::Factor() {
     ExpressionNode *current = NULL;
@@ -279,6 +283,13 @@ ExpressionNode* ParserClass::Factor() {
     return current;
 }
 
+NotNode * ParserClass::Not() {
+    Match(NOT_TOKEN);
+    ExpressionNode * curr = Factor();
+    NotNode *e = new NotNode(curr);
+    return e;
+}
+
 IntegerNode * ParserClass::Integer() {
     TokenClass tc = Match(INTEGER_TOKEN);
     string s = tc.GetLexeme();
@@ -287,6 +298,53 @@ IntegerNode * ParserClass::Integer() {
     return i;
 }
 
+IfStatementNode* ParserClass::IfStatement() {
+    StatementNode* S2 = NULL;
+    Match(IF_TOKEN);
+    Match(LPAREN_TOKEN);
+    ExpressionNode * e = Expression();
+    Match(RPAREN_TOKEN);
+    StatementNode * S1 = Statement();
+    TokenType tt = mScanner->PeekNextToken().GetTokenType();
+    if (tt == ELSE_TOKEN) {
+        Match(ELSE_TOKEN);
+        S2 = Statement();
+    }
+    IfStatementNode* in = new IfStatementNode(e,S1,S2);
+    return in;
+}
+
+WhileStatementNode* ParserClass::WhileStatement() {
+    Match(WHILE_TOKEN);
+    Match(LPAREN_TOKEN);
+    ExpressionNode *e = Expression();
+    Match(RPAREN_TOKEN);
+    StatementNode *statement = Statement();
+    WhileStatementNode *ws = new WhileStatementNode(e, statement);
+    return ws;
+}
+
+DoWhileNode* ParserClass::DoWhile() {
+    StatementNode *statement = NULL;
+    StatementGroupNode *statementgroup = NULL;
+    Match(DO_TOKEN);
+    TokenType tt = mScanner->PeekNextToken().GetTokenType();
+    if (tt == LCURLY_TOKEN) {
+        Match(LCURLY_TOKEN);
+        statementgroup = StatementGroup();
+        Match(RCURLY_TOKEN);
+    }
+    else {
+        statement = Statement();
+    }
+    Match(WHILE_TOKEN);
+    Match(LPAREN_TOKEN);
+    ExpressionNode *e = Expression();
+    Match(RPAREN_TOKEN);
+    Match(SEMICOLON_TOKEN);
+    DoWhileNode *dw = new DoWhileNode(e, statement, statementgroup);
+    return dw;
+}
 
 
 

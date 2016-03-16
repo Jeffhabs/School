@@ -31,7 +31,7 @@ TokenClass ScannerClass::GetNextToken() {
             mLineNumber++;
         }
         currentState = stateMachine.UpdateState(c, correspondingTokenType);
-        if (currentState == START_STATE || currentState == END_OF_FILE_STATE) lexeme = "";
+        if (currentState == START_STATE || currentState == EOF_STATE) lexeme = "";
     } while (currentState != CANTMOVE_STATE);
     
     if (correspondingTokenType == BAD_TOKEN) {

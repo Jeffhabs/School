@@ -23,6 +23,30 @@ CoutStatementNode::~CoutStatementNode() {
     delete mEndLNode;
 }
 
+void CoutStatementNode::Interpret() {
+    for (int i=0; i<mExpressionNodes.size(); i++) {
+        if (mExpressionNodes.at(i) == NULL) {
+            mEndLNode->Evaluate();
+        }
+        else {
+            cout << mExpressionNodes.at(i)->Evaluate();
+        }
+    }
+}
+/*
+void CoutStatementNode::Code(InstructionsClass &machineCode) {
+    for (int i=0; i<mExpressionNodes.size(); i++) {
+        if (mExpressionNodes.at(i) == NULL) {
+            mEndlNode->CodeEvaluate(machineCode);
+        }
+        else {
+            mExpressionNodes.at(i)->CodeEvaluate(machineCode);
+            machineCode.PopAndWrite();
+        }
+    }
+}
+*/
+
 void CoutStatementNode::AddExpression(ExpressionNode *en) {
     mExpressionNodes.push_back(en);
 }
@@ -37,3 +61,11 @@ int EndLNode::Evaluate(){
     cout << endl;
     return 0;
 }
+
+/*
+void EndlNode::CodeEvaluate(InstructionsClass &machineCode) {
+    MSG("Endl Statement CodeEvaluate");
+    machineCode.WriteEndl();
+}
+*/
+

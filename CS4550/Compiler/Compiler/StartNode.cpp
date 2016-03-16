@@ -18,3 +18,13 @@ StartNode::~StartNode() {
     MSG("StartNode Destructor")
     delete mProgramNode;
 }
+
+void StartNode::Interpret() {
+    mProgramNode->Interpret();
+}
+
+/*
+void StartNode::Code(InstructionsClass &machineCode) {
+    mProgramNode->Code(machineCode);
+}
+*/

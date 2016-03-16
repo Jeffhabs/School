@@ -18,3 +18,11 @@ int DivideNode::Evaluate() {
     MSG("DivideNode Evaluate");
     return mLhs->Evaluate() / mRhs->Evaluate();
 }
+/*
+void DivideNode::CodeEvaluate(InstructionsClass &machineCode)
+{
+    mLhs->CodeEvaluate(machineCode);
+    mRhs->CodeEvaluate(machineCode);
+    machineCode.PopPopDivPush();
+}
+*/

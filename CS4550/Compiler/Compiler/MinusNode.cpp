@@ -18,3 +18,12 @@ int MinusNode::Evaluate() {
     MSG("MinusMode Evaluate");
     return mLhs->Evaluate() - mRhs->Evaluate();
 }
+/*
+void MinusNode::CodeEvaluate(InstructionsClass &machineCode)
+{
+    MSG("MinusNode CodeEvaulate");
+    mLhs->CodeEvaluate(machineCode);
+    mRhs->CodeEvaluate(machineCode);
+    machineCode.PopPopSubPush();
+}
+*/

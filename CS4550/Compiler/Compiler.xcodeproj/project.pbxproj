@@ -11,6 +11,14 @@
 		38093DFE1C61B9CA006E1AEA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38093DFD1C61B9CA006E1AEA /* main.cpp */; };
 		38093E051C61B9E5006E1AEA /* Token.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38093E041C61B9E5006E1AEA /* Token.cpp */; };
 		38188EB41C622B2C002AB5FB /* Scanner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38188EB31C622B2C002AB5FB /* Scanner.cpp */; };
+		384861681C98BEE700D84FC9 /* ExpressionNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384861671C98BEE700D84FC9 /* ExpressionNode.cpp */; };
+		3848616A1C98CF3000D84FC9 /* ExponentNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384861691C98CF3000D84FC9 /* ExponentNode.cpp */; };
+		3848616C1C98DA3300D84FC9 /* DoWhileNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3848616B1C98DA3300D84FC9 /* DoWhileNode.cpp */; };
+		3848616E1C98E7EE00D84FC9 /* IfStatementNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3848616D1C98E7EE00D84FC9 /* IfStatementNode.cpp */; };
+		384861701C98E84900D84FC9 /* MinusEqualNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3848616F1C98E84900D84FC9 /* MinusEqualNode.cpp */; };
+		384861721C98EACC00D84FC9 /* PlusEqualNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384861711C98EACC00D84FC9 /* PlusEqualNode.cpp */; };
+		384861741C98EB9500D84FC9 /* RepeatStatementNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384861731C98EB9500D84FC9 /* RepeatStatementNode.cpp */; };
+		384861761C98EC4600D84FC9 /* WhileStatementNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384861751C98EC4600D84FC9 /* WhileStatementNode.cpp */; };
 		388F1ED61C876F8300BB930E /* Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388F1ED51C876F8300BB930E /* Parser.cpp */; };
 		38B9E3B51C87F91900EBBE7D /* NotNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38B9E3B41C87F91900EBBE7D /* NotNode.cpp */; };
 		38E80F781C622F94004B8E68 /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38093E071C61C60F006E1AEA /* StateMachine.cpp */; };
@@ -30,12 +38,6 @@
 		38FFF1E21C86D6020039B214 /* MinusNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38FFF1E11C86D6020039B214 /* MinusNode.cpp */; };
 		38FFF1E41C86D60D0039B214 /* TimesNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38FFF1E31C86D60D0039B214 /* TimesNode.cpp */; };
 		38FFF1E61C86D61A0039B214 /* DivideNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38FFF1E51C86D61A0039B214 /* DivideNode.cpp */; };
-		38FFF1E81C86D6260039B214 /* LessNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38FFF1E71C86D6260039B214 /* LessNode.cpp */; };
-		38FFF1EA1C86D6400039B214 /* LessEqualNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38FFF1E91C86D6400039B214 /* LessEqualNode.cpp */; };
-		38FFF1EC1C86D64A0039B214 /* GreaterNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38FFF1EB1C86D64A0039B214 /* GreaterNode.cpp */; };
-		38FFF1EE1C86D6560039B214 /* GreaterEqualNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38FFF1ED1C86D6560039B214 /* GreaterEqualNode.cpp */; };
-		38FFF1F01C86D6610039B214 /* EqualNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38FFF1EF1C86D6610039B214 /* EqualNode.cpp */; };
-		38FFF1F21C86D6700039B214 /* NotEqualNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38FFF1F11C86D6700039B214 /* NotEqualNode.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +65,14 @@
 		38188EAF1C61FEC7002AB5FB /* Scanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
 		38188EB01C621979002AB5FB /* test.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		38188EB31C622B2C002AB5FB /* Scanner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scanner.cpp; sourceTree = "<group>"; };
+		384861671C98BEE700D84FC9 /* ExpressionNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExpressionNode.cpp; sourceTree = "<group>"; };
+		384861691C98CF3000D84FC9 /* ExponentNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExponentNode.cpp; sourceTree = "<group>"; };
+		3848616B1C98DA3300D84FC9 /* DoWhileNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DoWhileNode.cpp; sourceTree = "<group>"; };
+		3848616D1C98E7EE00D84FC9 /* IfStatementNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IfStatementNode.cpp; sourceTree = "<group>"; };
+		3848616F1C98E84900D84FC9 /* MinusEqualNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MinusEqualNode.cpp; sourceTree = "<group>"; };
+		384861711C98EACC00D84FC9 /* PlusEqualNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlusEqualNode.cpp; sourceTree = "<group>"; };
+		384861731C98EB9500D84FC9 /* RepeatStatementNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RepeatStatementNode.cpp; sourceTree = "<group>"; };
+		384861751C98EC4600D84FC9 /* WhileStatementNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WhileStatementNode.cpp; sourceTree = "<group>"; };
 		388F1ED51C876F8300BB930E /* Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Parser.cpp; sourceTree = "<group>"; };
 		388F1ED71C876F8D00BB930E /* Parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		38B9E3B41C87F91900EBBE7D /* NotNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NotNode.cpp; sourceTree = "<group>"; };
@@ -83,12 +93,6 @@
 		38FFF1E11C86D6020039B214 /* MinusNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MinusNode.cpp; sourceTree = "<group>"; };
 		38FFF1E31C86D60D0039B214 /* TimesNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimesNode.cpp; sourceTree = "<group>"; };
 		38FFF1E51C86D61A0039B214 /* DivideNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DivideNode.cpp; sourceTree = "<group>"; };
-		38FFF1E71C86D6260039B214 /* LessNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LessNode.cpp; sourceTree = "<group>"; };
-		38FFF1E91C86D6400039B214 /* LessEqualNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LessEqualNode.cpp; sourceTree = "<group>"; };
-		38FFF1EB1C86D64A0039B214 /* GreaterNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GreaterNode.cpp; sourceTree = "<group>"; };
-		38FFF1ED1C86D6560039B214 /* GreaterEqualNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GreaterEqualNode.cpp; sourceTree = "<group>"; };
-		38FFF1EF1C86D6610039B214 /* EqualNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EqualNode.cpp; sourceTree = "<group>"; };
-		38FFF1F11C86D6700039B214 /* NotEqualNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NotEqualNode.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,28 +148,30 @@
 		38FFF1CA1C86C0AF0039B214 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
-				38FFF1C51C86BFB60039B214 /* StartNode.cpp */,
-				38FFF1CB1C86C0D00039B214 /* ProgramNode.cpp */,
+				38FFF1D51C86C9530039B214 /* AssignmentStatementNode.cpp */,
+				38FFF1DD1C86CFE20039B214 /* BinaryOperatorNode.cpp */,
 				38FFF1CD1C86C1560039B214 /* BlockNode.cpp */,
+				38FFF1D71C86CA7B0039B214 /* CoutStatementNode.cpp */,
+				38FFF1D31C86C7C40039B214 /* DeclarationStatementNode.cpp */,
+				38FFF1E51C86D61A0039B214 /* DivideNode.cpp */,
+				3848616B1C98DA3300D84FC9 /* DoWhileNode.cpp */,
+				384861691C98CF3000D84FC9 /* ExponentNode.cpp */,
+				384861671C98BEE700D84FC9 /* ExpressionNode.cpp */,
+				38FFF1DB1C86CD490039B214 /* IdentifierNode.cpp */,
+				3848616D1C98E7EE00D84FC9 /* IfStatementNode.cpp */,
+				38FFF1D91C86CBCB0039B214 /* IntegerNode.cpp */,
+				3848616F1C98E84900D84FC9 /* MinusEqualNode.cpp */,
+				38FFF1E11C86D6020039B214 /* MinusNode.cpp */,
+				38B9E3B41C87F91900EBBE7D /* NotNode.cpp */,
+				384861711C98EACC00D84FC9 /* PlusEqualNode.cpp */,
+				38FFF1DF1C86D0CC0039B214 /* PlusNode.cpp */,
+				38FFF1CB1C86C0D00039B214 /* ProgramNode.cpp */,
+				384861731C98EB9500D84FC9 /* RepeatStatementNode.cpp */,
+				38FFF1C51C86BFB60039B214 /* StartNode.cpp */,
 				38FFF1CF1C86C2AC0039B214 /* StatementGroupNode.cpp */,
 				38FFF1D11C86C6550039B214 /* StatementNode.cpp */,
-				38FFF1D31C86C7C40039B214 /* DeclarationStatementNode.cpp */,
-				38FFF1D51C86C9530039B214 /* AssignmentStatementNode.cpp */,
-				38FFF1D71C86CA7B0039B214 /* CoutStatementNode.cpp */,
-				38FFF1D91C86CBCB0039B214 /* IntegerNode.cpp */,
-				38FFF1DB1C86CD490039B214 /* IdentifierNode.cpp */,
-				38FFF1DD1C86CFE20039B214 /* BinaryOperatorNode.cpp */,
-				38FFF1DF1C86D0CC0039B214 /* PlusNode.cpp */,
-				38FFF1E11C86D6020039B214 /* MinusNode.cpp */,
 				38FFF1E31C86D60D0039B214 /* TimesNode.cpp */,
-				38FFF1E51C86D61A0039B214 /* DivideNode.cpp */,
-				38FFF1E71C86D6260039B214 /* LessNode.cpp */,
-				38FFF1E91C86D6400039B214 /* LessEqualNode.cpp */,
-				38FFF1EB1C86D64A0039B214 /* GreaterNode.cpp */,
-				38FFF1ED1C86D6560039B214 /* GreaterEqualNode.cpp */,
-				38FFF1EF1C86D6610039B214 /* EqualNode.cpp */,
-				38FFF1F11C86D6700039B214 /* NotEqualNode.cpp */,
-				38B9E3B41C87F91900EBBE7D /* NotNode.cpp */,
+				384861751C98EC4600D84FC9 /* WhileStatementNode.cpp */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -226,35 +232,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38FFF1EC1C86D64A0039B214 /* GreaterNode.cpp in Sources */,
-				38FFF1E81C86D6260039B214 /* LessNode.cpp in Sources */,
+				3848616C1C98DA3300D84FC9 /* DoWhileNode.cpp in Sources */,
+				384861721C98EACC00D84FC9 /* PlusEqualNode.cpp in Sources */,
 				38FFF1E21C86D6020039B214 /* MinusNode.cpp in Sources */,
 				380694E31C7ABE0800C28E77 /* Symbol.cpp in Sources */,
 				38093DFE1C61B9CA006E1AEA /* main.cpp in Sources */,
-				38FFF1EE1C86D6560039B214 /* GreaterEqualNode.cpp in Sources */,
+				3848616A1C98CF3000D84FC9 /* ExponentNode.cpp in Sources */,
 				38FFF1D61C86C9530039B214 /* AssignmentStatementNode.cpp in Sources */,
 				38FFF1C61C86BFB60039B214 /* StartNode.cpp in Sources */,
 				38093E051C61B9E5006E1AEA /* Token.cpp in Sources */,
 				38FFF1E41C86D60D0039B214 /* TimesNode.cpp in Sources */,
+				384861701C98E84900D84FC9 /* MinusEqualNode.cpp in Sources */,
 				38FFF1C41C86B9AB0039B214 /* Node.cpp in Sources */,
 				38188EB41C622B2C002AB5FB /* Scanner.cpp in Sources */,
+				384861761C98EC4600D84FC9 /* WhileStatementNode.cpp in Sources */,
 				38FFF1D41C86C7C40039B214 /* DeclarationStatementNode.cpp in Sources */,
 				38FFF1DA1C86CBCB0039B214 /* IntegerNode.cpp in Sources */,
-				38FFF1F01C86D6610039B214 /* EqualNode.cpp in Sources */,
+				3848616E1C98E7EE00D84FC9 /* IfStatementNode.cpp in Sources */,
 				38FFF1D81C86CA7B0039B214 /* CoutStatementNode.cpp in Sources */,
 				38B9E3B51C87F91900EBBE7D /* NotNode.cpp in Sources */,
 				388F1ED61C876F8300BB930E /* Parser.cpp in Sources */,
 				38FFF1CE1C86C1560039B214 /* BlockNode.cpp in Sources */,
 				38FFF1E01C86D0CC0039B214 /* PlusNode.cpp in Sources */,
 				38FFF1D21C86C6550039B214 /* StatementNode.cpp in Sources */,
+				384861741C98EB9500D84FC9 /* RepeatStatementNode.cpp in Sources */,
 				38FFF1DE1C86CFE20039B214 /* BinaryOperatorNode.cpp in Sources */,
-				38FFF1EA1C86D6400039B214 /* LessEqualNode.cpp in Sources */,
 				38FFF1DC1C86CD490039B214 /* IdentifierNode.cpp in Sources */,
 				38FFF1CC1C86C0D00039B214 /* ProgramNode.cpp in Sources */,
 				38E80F781C622F94004B8E68 /* StateMachine.cpp in Sources */,
-				38FFF1F21C86D6700039B214 /* NotEqualNode.cpp in Sources */,
 				38FFF1E61C86D61A0039B214 /* DivideNode.cpp in Sources */,
 				38FFF1D01C86C2AC0039B214 /* StatementGroupNode.cpp in Sources */,
+				384861681C98BEE700D84FC9 /* ExpressionNode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

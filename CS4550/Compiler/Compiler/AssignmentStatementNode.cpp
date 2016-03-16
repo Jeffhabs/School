@@ -16,5 +16,20 @@ AssignmentStatementNode::AssignmentStatementNode(IdentifierNode *idNode, Express
 
 AssignmentStatementNode::~AssignmentStatementNode() {
     MSG("AssignmentStatementNode Destructor");
-    delete mIdentifierNode, mExpressionNode;
+    delete mIdentifierNode;
+    delete mExpressionNode;
+    
 }
+
+void AssignmentStatementNode::Interpret() {
+    mIdentifierNode->SetValue(mExpressionNode->Evaluate());
+}
+
+/*
+void AssignmentStatementNode::Code(InstructionsClass &machineCode)
+{
+    MSG("AssignmentStatementNode Code");
+    mExpressionNode->CodeEvaluate(machineCode);
+    machineCode.PopAndStore(mIdentifierNode->GetIndex());
+}
+*/

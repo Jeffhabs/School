@@ -27,6 +27,12 @@ class ExpressionNode;
 class IntegerNode;
 class NotNode;
 
+class IfStatementNode;
+class RepeatStatementNode;
+class WhileStatementNode;
+class DoWhileNode;
+class ExponentNode;
+
 class ParserClass {
 public:
     ParserClass(ScannerClass *scanner, SymbolTableClass *symbolTableClass);
@@ -43,6 +49,9 @@ private:
     DeclarationStatementNode * DeclarationStatement();
     AssignmentStatementNode * AssignmentStatement();
     CoutStatementNode * CoutStatement();
+    IfStatementNode * IfStatement();
+    WhileStatementNode * WhileStatement();
+    DoWhileNode * DoWhile();
     IdentifierNode * Identifier();
     ExpressionNode * Expression();
     ExpressionNode * Relational();

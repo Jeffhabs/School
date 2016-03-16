@@ -18,3 +18,12 @@ int TimesNode::Evaluate() {
     MSG("TimesNode Evaluate");
     return mLhs->Evaluate() * mRhs->Evaluate();
 }
+
+/*
+void TimesNode::CodeEvaluate(InstructionsClass &machineCode)
+{
+    mLhs->CodeEvaluate(machineCode);
+    mRhs->CodeEvaluate(machineCode);
+    machineCode.PopPopMulPush();
+}
+*/

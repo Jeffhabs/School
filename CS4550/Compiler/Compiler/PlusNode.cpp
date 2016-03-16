@@ -17,3 +17,13 @@ PlusNode::PlusNode(ExpressionNode *left, ExpressionNode *right)
 int PlusNode::Evaluate() {
     return mLhs->Evaluate() + mRhs->Evaluate();
 }
+
+
+/*
+void PlusNode::CodeEvaluate(InstructionsClass &machineCode)
+{
+    mLhs->CodeEvaluate(machineCode);
+    mRhs->CodeEvaluate(machineCode);
+    machineCode.PopPopAddPush();
+}
+*/
