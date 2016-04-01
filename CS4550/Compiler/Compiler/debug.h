@@ -8,7 +8,7 @@
 
 #ifndef debug_h
 #define debug_h
-
+using namespace std;
 #define ShowMessages 0
 
 #include <iostream>

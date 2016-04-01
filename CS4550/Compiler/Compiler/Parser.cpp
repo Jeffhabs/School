@@ -34,8 +34,8 @@ TokenClass ParserClass::Match(TokenType expectedType) {
         exit(1);
     }
     MSG("Sucessfully matched Token Type: " <<
-        currentToken.GetTokenTypeName() << ". Lexeme: \"" <<
-        currentToken.GetLexeme() << "\"");
+        currToken.GetTokenTypeName() << ". Lexeme: \"" <<
+        currToken.GetLexeme() << "\"");
     
     return currToken;
 }
@@ -89,6 +89,9 @@ StatementNode * ParserClass::Statement() {
     else if (tt == IF_TOKEN) {
         return IfStatement();
     }
+    else if (tt == WHILE_TOKEN) {
+        return WhileStatement();
+    }
     else if (tt == DO_TOKEN) {
         return DoWhile();
     }
@@ -111,6 +114,16 @@ AssignmentStatementNode * ParserClass::AssignmentStatement() {
         Match(ASSIGNMENT_TOKEN);
         ExpressionNode *expression = Expression();
         asn = new AssignmentStatementNode(identifier, expression);
+    }
+    else if (tt == PLUS_EQUAL_TOKEN) {
+        Match(PLUS_EQUAL_TOKEN);
+        ExpressionNode *expression = Expression();
+        asn = new PlusEqualNode(identifier, expression);
+    }
+    else if (tt == MINUS_EQUAL_TOKEN) {
+        Match(MINUS_EQUAL_TOKEN);
+        ExpressionNode *expression = Expression();
+        asn = new MinusEqualNode(identifier, expression);
     }
     Match(SEMICOLON_TOKEN);
     return asn;
@@ -250,16 +263,28 @@ ExpressionNode* ParserClass::Term() {
 }
 
 ExpressionNode* ParserClass::Exponent() {
-    ExpressionNode *current = Factor();
+    ExpressionNode *current = Not();
     while (true) {
         TokenType tt = mScanner->PeekNextToken().GetTokenType();
         if (tt == EXPONENT_TOKEN) {
             Match(tt);
-            current = new ExponentNode(current, Factor());
+            current = new ExponentNode(current, Not());
         }
         else {
             return current;
         }
+    }
+}
+
+NotNode * ParserClass::Not() {
+    ExpressionNode * curr = Factor();
+    NotNode *e = new NotNode(curr);
+    TokenType tt = mScanner->PeekNextToken().GetTokenType();
+    if ( tt == NOT_TOKEN) {
+        return new NotNode(Not());
+    }
+    else {
+        return e;
     }
 }
 
@@ -283,12 +308,7 @@ ExpressionNode* ParserClass::Factor() {
     return current;
 }
 
-NotNode * ParserClass::Not() {
-    Match(NOT_TOKEN);
-    ExpressionNode * curr = Factor();
-    NotNode *e = new NotNode(curr);
-    return e;
-}
+
 
 IntegerNode * ParserClass::Integer() {
     TokenClass tc = Match(INTEGER_TOKEN);

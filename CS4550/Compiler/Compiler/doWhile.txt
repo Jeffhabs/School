@@ -1,0 +1,13 @@
+void main()
+{
+    int count;
+    count = 5;
+
+    while (count > 0)
+    {
+        cout << count;
+        count = count - 1;
+        //54321
+    }
+
+}

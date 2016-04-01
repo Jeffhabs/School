@@ -1,9 +1,50 @@
 void main()
 {
-	int sum;
-	sum = 3 + 400;
-	cout << sum;
+    // test line comments
 
-    /* Are block-comments working */
-    // Are line-comments working
+    int x;
+    int count;
+    count = 1;
+    x = 30 / 5;
+    int num;
+    num = 6;
+    x += 2;
+
+    if (x != 9 || x >= 4)
+    {
+        //x is 8
+        cout << num * num << endl;
+        cout << x << endl;
+
+    }
+
+    if (x < 200 && x == 8)
+    {
+        //x becomes 2
+        cout << x / 4 << endl;
+    }
+    do
+    {
+        //prints 1234
+        cout << count;
+        count += 1;
+    }
+    while( count <= 4);
+
+    /*
+     test block comments**
+     output should be  36
+                        8
+                        2
+                     1234
+    */
+
+    while (count > 0)
+    {
+    cout << count;
+    count = count - 1;
+    //54321
+    }
+
+    // test line comments again
 }

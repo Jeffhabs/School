@@ -17,7 +17,7 @@
 using namespace std;
 
 void testScanner() {
-    ScannerClass scanner("test.txt");
+    ScannerClass scanner("/Users/jeffreyhaberle/School/CS4550/Compiler/Compiler/not.txt");
     TokenClass token;
     
     do {
@@ -46,23 +46,25 @@ void testSymbolTable() {
     //table.SetValue("fail", 2); //variable does not exist
     table.GetValue("test");
     //table.AddEntry("test"); //already exists
-    table.GetValue("fail");
+    //table.GetValue("fail");
 }
 
 void testParser() {
     SymbolTableClass symbolTable;
-    ScannerClass scanner("/Users/jeffreyhaberle/School/CS4550/Compiler/Compiler/test.txt");
+    ScannerClass scanner("/Users/jeffreyhaberle/School/CS4550/Compiler/Compiler/not.txt");
     ParserClass parser(&scanner, &symbolTable);
     StartNode *root = parser.Start();
     root->Interpret();
     
 }
 
-int main()
-{
+
+int main(int argc, const char * argv[]) {
+    
+    testScanner();
+    cout << " " << endl;
+    //testSymbolTable();
+    cout << " " << endl;
     testParser();
-
+    cout << " " << endl;
 }
-
-
-

@@ -10,7 +10,6 @@
 		380694E31C7ABE0800C28E77 /* Symbol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 380694E21C7ABE0800C28E77 /* Symbol.cpp */; };
 		38093DFE1C61B9CA006E1AEA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38093DFD1C61B9CA006E1AEA /* main.cpp */; };
 		38093E051C61B9E5006E1AEA /* Token.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38093E041C61B9E5006E1AEA /* Token.cpp */; };
-		38188EB41C622B2C002AB5FB /* Scanner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38188EB31C622B2C002AB5FB /* Scanner.cpp */; };
 		384861681C98BEE700D84FC9 /* ExpressionNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384861671C98BEE700D84FC9 /* ExpressionNode.cpp */; };
 		3848616A1C98CF3000D84FC9 /* ExponentNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384861691C98CF3000D84FC9 /* ExponentNode.cpp */; };
 		3848616C1C98DA3300D84FC9 /* DoWhileNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3848616B1C98DA3300D84FC9 /* DoWhileNode.cpp */; };
@@ -19,6 +18,7 @@
 		384861721C98EACC00D84FC9 /* PlusEqualNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384861711C98EACC00D84FC9 /* PlusEqualNode.cpp */; };
 		384861741C98EB9500D84FC9 /* RepeatStatementNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384861731C98EB9500D84FC9 /* RepeatStatementNode.cpp */; };
 		384861761C98EC4600D84FC9 /* WhileStatementNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384861751C98EC4600D84FC9 /* WhileStatementNode.cpp */; };
+		384861771C98EEFB00D84FC9 /* Scanner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38188EB31C622B2C002AB5FB /* Scanner.cpp */; };
 		388F1ED61C876F8300BB930E /* Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388F1ED51C876F8300BB930E /* Parser.cpp */; };
 		38B9E3B51C87F91900EBBE7D /* NotNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38B9E3B41C87F91900EBBE7D /* NotNode.cpp */; };
 		38E80F781C622F94004B8E68 /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38093E071C61C60F006E1AEA /* StateMachine.cpp */; };
@@ -73,6 +73,8 @@
 		384861711C98EACC00D84FC9 /* PlusEqualNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlusEqualNode.cpp; sourceTree = "<group>"; };
 		384861731C98EB9500D84FC9 /* RepeatStatementNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RepeatStatementNode.cpp; sourceTree = "<group>"; };
 		384861751C98EC4600D84FC9 /* WhileStatementNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WhileStatementNode.cpp; sourceTree = "<group>"; };
+		384861781C98F3AA00D84FC9 /* not.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = not.txt; sourceTree = "<group>"; };
+		384861791C98F3AA00D84FC9 /* doWhile.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = doWhile.txt; sourceTree = "<group>"; };
 		388F1ED51C876F8300BB930E /* Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Parser.cpp; sourceTree = "<group>"; };
 		388F1ED71C876F8D00BB930E /* Parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		38B9E3B41C87F91900EBBE7D /* NotNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NotNode.cpp; sourceTree = "<group>"; };
@@ -125,6 +127,8 @@
 		38093DFC1C61B9CA006E1AEA /* Compiler */ = {
 			isa = PBXGroup;
 			children = (
+				384861781C98F3AA00D84FC9 /* not.txt */,
+				384861791C98F3AA00D84FC9 /* doWhile.txt */,
 				38188EB01C621979002AB5FB /* test.txt */,
 				38093DFD1C61B9CA006E1AEA /* main.cpp */,
 				38093E041C61B9E5006E1AEA /* Token.cpp */,
@@ -244,7 +248,7 @@
 				38FFF1E41C86D60D0039B214 /* TimesNode.cpp in Sources */,
 				384861701C98E84900D84FC9 /* MinusEqualNode.cpp in Sources */,
 				38FFF1C41C86B9AB0039B214 /* Node.cpp in Sources */,
-				38188EB41C622B2C002AB5FB /* Scanner.cpp in Sources */,
+				384861771C98EEFB00D84FC9 /* Scanner.cpp in Sources */,
 				384861761C98EC4600D84FC9 /* WhileStatementNode.cpp in Sources */,
 				38FFF1D41C86C7C40039B214 /* DeclarationStatementNode.cpp in Sources */,
 				38FFF1DA1C86CBCB0039B214 /* IntegerNode.cpp in Sources */,

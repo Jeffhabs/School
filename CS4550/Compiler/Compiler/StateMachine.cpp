@@ -65,7 +65,7 @@ StateMachineClass::StateMachineClass() {
     mLegalMoves[LESS_STATE][EQUAL_CHAR] = LESS_EQUAL_STATE;
     mLegalMoves[GREATER_STATE][EQUAL_CHAR] = GREATER_EQUAL_STATE;
     
-    /* (+ - * /) */
+    //  + - / *
     mLegalMoves[START_STATE][PLUS_CHAR] = PLUS_STATE;
     mLegalMoves[START_STATE][MINUS_CHAR] = MINUS_STATE;
     mLegalMoves[START_STATE][TIMES_CHAR] = TIMES_STATE;
@@ -75,8 +75,8 @@ StateMachineClass::StateMachineClass() {
     
     
     /* != not equal */
-   // mLegalMoves[START_STATE][BANG_CHAR] = ALMOST_NOT_EQUAL_STATE;
-   // mLegalMoves[ALMOST_NOT_EQUAL_STATE][EQUAL_CHAR] = NOTEQUAL_STATE;
+    mLegalMoves[START_STATE][BANG_CHAR] = ALMOST_NOTEQUAL_STATE;
+    mLegalMoves[ALMOST_NOTEQUAL_STATE][EQUAL_CHAR] = NOTEQUAL_STATE;
     
     /* insertion */
     mLegalMoves[LESS_STATE][LESS_CHAR] = INSERTION_STATE;
@@ -85,7 +85,7 @@ StateMachineClass::StateMachineClass() {
     mLegalMoves[START_STATE][WHITESPACE_CHAR] = START_STATE;
     mLegalMoves[START_STATE][NEW_LINE_CHAR] = START_STATE;
     
-    /* // */
+    /* || */
     mLegalMoves[START_STATE][PIPE_CHAR] = PIPE1_STATE;
     mLegalMoves[PIPE1_STATE][PIPE_CHAR] = OR_STATE;
     
@@ -121,56 +121,85 @@ StateMachineClass::StateMachineClass() {
     mCorrespondingTokenTypes[PLUS_STATE]          = PLUS_TOKEN;
     mCorrespondingTokenTypes[MINUS_STATE]         = MINUS_TOKEN;
     mCorrespondingTokenTypes[TIMES_STATE]         = TIMES_TOKEN;
-    mCorrespondingTokenTypes[DIVIDE_TOKEN]        = DIVIDE_TOKEN;
+    mCorrespondingTokenTypes[DIVIDE_STATE]        = DIVIDE_TOKEN;
     mCorrespondingTokenTypes[EXPONENT_STATE]      = EXPONENT_TOKEN;
     mCorrespondingTokenTypes[PLUS_EQUAL_STATE]    = PLUS_EQUAL_TOKEN;
-    mCorrespondingTokenTypes[MINUS_EQUAL_STATE]     = MINUS_EQUAL_TOKEN;
+    mCorrespondingTokenTypes[MINUS_EQUAL_STATE]   = MINUS_EQUAL_TOKEN;
     mCorrespondingTokenTypes[EQUAL_STATE]         = EQUAL_TOKEN;
+    mCorrespondingTokenTypes[NOTEQUAL_STATE]      = NOT_EQUAL_TOKEN;
     mCorrespondingTokenTypes[INSERTION_STATE]     = INSERTION_TOKEN;
     mCorrespondingTokenTypes[EOF_STATE]           = EOF_TOKEN;
+    mCorrespondingTokenTypes[ALMOST_NOTEQUAL_STATE] = NOT_TOKEN;
 }
 
 MachineState StateMachineClass::UpdateState(char currentCharacter, TokenType &correspondingTokenType) {
     
     CharacterType charType = BAD_CHAR;
     
-    if(isdigit(currentCharacter))
+    if (isdigit(currentCharacter)) {
         charType = DIGIT_CHAR;
-    if(isalpha(currentCharacter))
+    }
+    else if (isalpha(currentCharacter)) {
         charType = LETTER_CHAR;
-    if(isspace(currentCharacter))
-        charType = WHITESPACE_CHAR;
-    if(currentCharacter == '+')
-        charType = PLUS_CHAR;
-    if(currentCharacter == '(')
-        charType = LPAREN_CHAR;
-    if(currentCharacter == ')')
-        charType = RPAREN_CHAR;
-    if(currentCharacter == '{')
-        charType = LCURLY_CHAR;
-    if(currentCharacter == '}')
-        charType = RCURLY_CHAR;
-    if(currentCharacter == ';')
-        charType = SEMICOLON_CHAR;
-    if(currentCharacter == '<')
-        charType = LESS_CHAR;
-    if(currentCharacter == '>')
-        charType = GREATER_CHAR;
-    if(currentCharacter == '=')
-        charType = EQUAL_CHAR;
-    if(currentCharacter == '-')
-        charType = MINUS_CHAR;
-    if(currentCharacter == '*')
-        charType = TIMES_CHAR;
-    if(currentCharacter == '/')
-        charType = DIVIDE_CHAR;
-    if(currentCharacter == '\n')
-        charType = NEW_LINE_CHAR;
-    //if(currentCharacter == '!')
-    //    charType = BANG_CHAR;
-    if(currentCharacter == EOF )
+    }
+    else if (currentCharacter == EOF) {
         charType = EOF_CHAR;
-    
+    }
+    else if (currentCharacter == '\n') {
+        charType = NEW_LINE_CHAR;
+    }
+    else if (isspace(currentCharacter)) {
+        charType = WHITESPACE_CHAR;
+    }
+    else if (currentCharacter == '+') {
+        charType = PLUS_CHAR;
+    }
+    else if (currentCharacter == '(') {
+        charType = LPAREN_CHAR;
+    }
+    else if(currentCharacter == ')') {
+        charType = RPAREN_CHAR;
+    }
+    else if(currentCharacter == '{') {
+        charType = LCURLY_CHAR;
+    }
+    else if(currentCharacter == '}') {
+        charType = RCURLY_CHAR;
+    }
+    else if(currentCharacter == ';') {
+        charType = SEMICOLON_CHAR;
+    }
+    else if(currentCharacter == '<') {
+        charType = LESS_CHAR;
+    }
+    else if(currentCharacter == '>') {
+        charType = GREATER_CHAR;
+    }
+    else if(currentCharacter == '=') {
+        charType = EQUAL_CHAR;
+    }
+    else if(currentCharacter == '-') {
+        charType = MINUS_CHAR;
+    }
+    else if(currentCharacter == '*') {
+        charType = TIMES_CHAR;
+    }
+    else if(currentCharacter == '/') {
+        charType = DIVIDE_CHAR;
+    }
+    else if(currentCharacter == '|') {
+        charType = PIPE_CHAR;
+    }
+    else if(currentCharacter == '&') {
+        charType = AMPERSAND_CHAR;
+    }
+    else if(currentCharacter == '^') {
+        charType = EXPONENT_CHAR;
+    }
+    else if(currentCharacter == '!') {
+        charType = BANG_CHAR;
+    }
+   
     
     if(charType == BAD_CHAR) {
         cerr << "Bad Character'" << currentCharacter <<"'" << endl;

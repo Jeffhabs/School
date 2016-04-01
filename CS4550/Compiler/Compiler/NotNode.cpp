@@ -20,12 +20,13 @@ NotNode::~NotNode() {
 
 int NotNode::Evaluate() {
     return !mExpressionNode->Evaluate();
+    /*
+    if(!(mExpressionNode->Evaluate() == 0)) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+    */
 }
 
-/*
-void NotNode::CodeEvaluate(InstructionsClass &machineCode)
-{
-    MSG("NotNode CodeEvaluate");
-    mExpressionNode->CodeEvaluate(machineCode);
-}
-*/

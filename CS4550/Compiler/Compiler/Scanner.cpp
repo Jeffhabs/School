@@ -46,7 +46,7 @@ TokenClass ScannerClass::GetNextToken() {
     mFin.unget();
     lexeme.pop_back();
     TokenClass token(correspondingTokenType, lexeme);
-    token.CheckReserved();
+    
     return token;
 }
 
